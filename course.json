@@ -19,6 +19,6 @@
     "Frontend Masters",
     "FrontendMasters"
   ],
-  "productionBaseUrl": "/getting-started-with-javascript-v3",
+  "productionBaseUrl": "/getting-started-with-javascript",
   "csvPath": "./out/lessons.csv"
 }
