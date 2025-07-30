@@ -1,3 +1,6 @@
+@import "github-dark.css";
+@import "github.css";
+
 :root {
   --primary: #dfa067;
   --secondary: #93aca7;
@@ -27,7 +30,7 @@
   --emphasized-border: #aab6d2;
 }
 
- [data-theme="dark"] {
+[data-theme="dark"] {
   --primary: #224159;
   --secondary: #93aca7;
   --highlight: #dfa067;
@@ -53,21 +56,20 @@
 
   --emphasized-bg: #dce8ff;
   --emphasized-border: #5a6c89;
-  }
+}
 
-  .lesson-title {
+.lesson-title {
   color: var(--highlight);
-  }
+}
 
-  .lesson-section-title {
-    color: var(--primary);
-  }
- 
- .terms {
+.lesson-section-title {
+  color: var(--primary);
+}
+
+.terms {
   color: var(--highlight);
- }
+}
 
- li {
+li {
   color: var(--highlight);
- }
-
+}

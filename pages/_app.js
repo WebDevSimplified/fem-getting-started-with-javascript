@@ -1,7 +1,6 @@
 import Head from "next/head";
 import "@fortawesome/fontawesome-free/css/all.css";
 
-import "highlight.js/styles/a11y-light.css";
 import "../styles/variables.css";
 import "../styles/footer.css";
 import "../styles/courses.css";
