@@ -161,6 +161,7 @@ export async function getLesson(targetDir, targetFile) {
               await fs.readdir(path.join(lessonsPath, dir[i + 1]))
             ).filter((str) => str.endsWith(".md"));
             const nextDirSlug = slugify(dir[i + 1]).slug;
+            console.log(await fs.readdir(path.join(lessonsPath, dir[i + 1])));
             const nextLessonSlug = slugify(nextDir[0]).slug.replace(
               /\.md$/,
               ""

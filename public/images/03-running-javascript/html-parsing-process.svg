@@ -1,0 +1,68 @@
+<svg width="800" height="150" viewBox="0 0 800 150" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="150" fill="#f8f9fa" />
+
+  <!-- Title -->
+  <text x="400" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="18"
+    font-weight="bold" fill="#2c3e50">HTML Parsing Process</text>
+
+  <!-- Step 1: Download HTML -->
+  <g transform="translate(50, 50)">
+    <rect x="0" y="0" width="140" height="60" rx="8" fill="#3498db" stroke="#2980b9"
+      stroke-width="2" />
+    <text x="70" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="12"
+      fill="white" font-weight="bold">1. Download</text>
+    <text x="70" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="12"
+      fill="white" font-weight="bold">HTML</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <path d="M 200 80 L 230 80" stroke="#34495e" stroke-width="2" fill="none"
+    marker-end="url(#arrowhead)" />
+
+  <!-- Step 2: Parse HTML -->
+  <g transform="translate(240, 50)">
+    <rect x="0" y="0" width="140" height="60" rx="8" fill="#e67e22" stroke="#d35400"
+      stroke-width="2" />
+    <text x="70" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="12"
+      fill="white" font-weight="bold">2. Parse HTML</text>
+    <text x="70" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="12"
+      fill="white" font-weight="bold">Top → Bottom</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <path d="M 390 80 L 420 80" stroke="#34495e" stroke-width="2" fill="none"
+    marker-end="url(#arrowhead)" />
+
+  <!-- Step 3: Build DOM -->
+  <g transform="translate(430, 50)">
+    <rect x="0" y="0" width="140" height="60" rx="8" fill="#9b59b6" stroke="#8e44ad"
+      stroke-width="2" />
+    <text x="70" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="12"
+      fill="white" font-weight="bold">3. Build DOM</text>
+    <text x="70" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="12"
+      fill="white" font-weight="bold">Document Tree</text>
+  </g>
+
+  <!-- Arrow 3 -->
+  <path d="M 580 80 L 610 80" stroke="#34495e" stroke-width="2" fill="none"
+    marker-end="url(#arrowhead)" />
+
+  <!-- Step 4: Render Page -->
+  <g transform="translate(620, 50)">
+    <rect x="0" y="0" width="130" height="60" rx="8" fill="#27ae60" stroke="#229954"
+      stroke-width="2" />
+    <text x="65" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="12"
+      fill="white" font-weight="bold">4. Render</text>
+    <text x="65" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="12"
+      fill="white" font-weight="bold">Page</text>
+  </g>
+
+
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#34495e" />
+    </marker>
+  </defs>
+</svg>

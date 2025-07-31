@@ -1,0 +1,198 @@
+<svg width="900" height="500" viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="900" height="500" fill="#f8f9fa" />
+
+  <!-- Title -->
+  <text x="450" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="18"
+    font-weight="bold" fill="#2c3e50">Script Execution Order Comparison</text>
+
+  <!-- HTML Structure Display -->
+  <g transform="translate(50, 50)">
+    <rect x="0" y="0" width="250" height="200" rx="8" fill="#ffffff" stroke="#bdc3c7"
+      stroke-width="2" />
+    <text x="125" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="14"
+      font-weight="bold" fill="#2c3e50">HTML Document</text>
+
+    <!-- HTML code representation -->
+    <text x="10" y="40" font-family="Monaco, monospace" font-size="10" fill="#34495e">&lt;head&gt;</text>
+    <text x="20" y="55" font-family="Monaco, monospace" font-size="10" fill="#e74c3c">&lt;script
+      src="A.js"&gt;&lt;/script&gt;</text>
+    <text x="20" y="70" font-family="Monaco, monospace" font-size="10" fill="#f39c12">&lt;script
+      src="B.js"&gt;&lt;/script&gt;</text>
+    <text x="20" y="85" font-family="Monaco, monospace" font-size="10" fill="#27ae60">&lt;script
+      src="C.js"&gt;&lt;/script&gt;</text>
+    <text x="10" y="100" font-family="Monaco, monospace" font-size="10" fill="#34495e">&lt;/head&gt;</text>
+    <text x="10" y="115" font-family="Monaco, monospace" font-size="10" fill="#34495e">&lt;body&gt;</text>
+    <text x="20" y="130" font-family="Monaco, monospace" font-size="10" fill="#34495e">
+      &lt;h1&gt;Content&lt;/h1&gt;</text>
+    <text x="10" y="145" font-family="Monaco, monospace" font-size="10" fill="#34495e">&lt;/body&gt;</text>
+
+    <!-- Document order indicator -->
+    <text x="125" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="11"
+      fill="#7f8c8d">Document Order: A → B → C</text>
+    <text x="125" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="11"
+      fill="#7f8c8d" font-style="italic">(Top to Bottom)</text>
+  </g>
+
+  <!-- Normal Loading Execution -->
+  <g transform="translate(350, 50)">
+    <rect x="0" y="0" width="200" height="200" rx="8" fill="#ffffff" stroke="#e74c3c"
+      stroke-width="2" />
+    <text x="100" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="14"
+      font-weight="bold" fill="#e74c3c">Normal Loading</text>
+    <text x="100" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="11"
+      fill="#7f8c8d">(No async/defer)</text>
+
+    <!-- Execution order boxes -->
+    <rect x="20" y="50" width="160" height="25" fill="#e74c3c" stroke="#c0392b" stroke-width="1" />
+    <text x="100" y="67" text-anchor="middle" font-family="Arial, sans-serif" font-size="12"
+      fill="white" font-weight="bold">1. A.js executes</text>
+
+    <rect x="20" y="80" width="160" height="25" fill="#e74c3c" stroke="#c0392b" stroke-width="1" />
+    <text x="100" y="97" text-anchor="middle" font-family="Arial, sans-serif" font-size="12"
+      fill="white" font-weight="bold">2. B.js executes</text>
+
+    <rect x="20" y="110" width="160" height="25" fill="#e74c3c" stroke="#c0392b" stroke-width="1" />
+    <text x="100" y="127" text-anchor="middle" font-family="Arial, sans-serif" font-size="12"
+      fill="white" font-weight="bold">3. C.js executes</text>
+
+    <!-- Characteristics -->
+    <text x="100" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="11"
+      fill="#27ae60" font-weight="bold">✅ Predictable Order</text>
+    <text x="100" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="11"
+      fill="#e74c3c" font-weight="bold">❌ Blocks HTML Parsing</text>
+    <text x="100" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="11"
+      fill="#34495e">Always: A → B → C</text>
+  </g>
+
+  <!-- Async Loading Execution -->
+  <g transform="translate(600, 50)">
+    <rect x="0" y="0" width="200" height="200" rx="8" fill="#ffffff" stroke="#f39c12"
+      stroke-width="2" />
+    <text x="100" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="14"
+      font-weight="bold" fill="#f39c12">Async Loading</text>
+    <text x="100" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="11"
+      fill="#7f8c8d">(async attribute)</text>
+
+    <!-- Random execution order example 1 -->
+    <rect x="20" y="50" width="160" height="25" fill="#f39c12" stroke="#e67e22" stroke-width="1" />
+    <text x="100" y="67" text-anchor="middle" font-family="Arial, sans-serif" font-size="12"
+      fill="white" font-weight="bold">1. B.js executes (?)</text>
+
+    <rect x="20" y="80" width="160" height="25" fill="#f39c12" stroke="#e67e22" stroke-width="1" />
+    <text x="100" y="97" text-anchor="middle" font-family="Arial, sans-serif" font-size="12"
+      fill="white" font-weight="bold">2. A.js executes (?)</text>
+
+    <rect x="20" y="110" width="160" height="25" fill="#f39c12" stroke="#e67e22" stroke-width="1" />
+    <text x="100" y="127" text-anchor="middle" font-family="Arial, sans-serif" font-size="12"
+      fill="white" font-weight="bold">3. C.js executes (?)</text>
+
+    <!-- Characteristics -->
+    <text x="100" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="11"
+      fill="#e74c3c" font-weight="bold">❌ Random Order</text>
+    <text x="100" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="11"
+      fill="#f39c12" font-weight="bold">⚠️ Blocks When Executing</text>
+    <text x="100" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="11"
+      fill="#34495e">Depends on download speed</text>
+  </g>
+
+  <!-- Defer Loading Execution -->
+  <g transform="translate(350, 280)">
+    <rect x="0" y="0" width="200" height="180" rx="8" fill="#ffffff" stroke="#27ae60"
+      stroke-width="2" />
+    <text x="100" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="14"
+      font-weight="bold" fill="#27ae60">Defer Loading</text>
+    <text x="100" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="11"
+      fill="#7f8c8d">(defer attribute)</text>
+
+    <!-- Execution order boxes -->
+    <rect x="20" y="50" width="160" height="25" fill="#27ae60" stroke="#229954" stroke-width="1" />
+    <text x="100" y="67" text-anchor="middle" font-family="Arial, sans-serif" font-size="12"
+      fill="white" font-weight="bold">1. A.js executes</text>
+
+    <rect x="20" y="80" width="160" height="25" fill="#27ae60" stroke="#229954" stroke-width="1" />
+    <text x="100" y="97" text-anchor="middle" font-family="Arial, sans-serif" font-size="12"
+      fill="white" font-weight="bold">2. B.js executes</text>
+
+    <rect x="20" y="110" width="160" height="25" fill="#27ae60" stroke="#229954" stroke-width="1" />
+    <text x="100" y="127" text-anchor="middle" font-family="Arial, sans-serif" font-size="12"
+      fill="white" font-weight="bold">3. C.js executes</text>
+
+    <!-- Characteristics -->
+    <text x="100" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="11"
+      fill="#27ae60" font-weight="bold">✅ Predictable Order</text>
+    <text x="100" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="11"
+      fill="#27ae60" font-weight="bold">✅ No HTML Blocking</text>
+  </g>
+
+  <!-- Multiple Possible Async Orders -->
+  <g transform="translate(600, 280)">
+    <rect x="0" y="0" width="200" height="180" rx="8" fill="#ffffff" stroke="#e67e22"
+      stroke-width="2" />
+    <text x="100" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="14"
+      font-weight="bold" fill="#e67e22">Async Possibilities</text>
+    <text x="100" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="11"
+      fill="#7f8c8d">Different execution orders</text>
+
+    <!-- Possible orders -->
+    <text x="20" y="55" font-family="Arial, sans-serif" font-size="10" fill="#34495e">Slow network:
+      A → B → C</text>
+    <text x="20" y="70" font-family="Arial, sans-serif" font-size="10" fill="#34495e">Fast network:
+      C → A → B</text>
+    <text x="20" y="85" font-family="Arial, sans-serif" font-size="10" fill="#34495e">Mixed speeds:
+      B → A → C</text>
+    <text x="20" y="100" font-family="Arial, sans-serif" font-size="10" fill="#34495e">Or any other
+      order!</text>
+
+    <!-- Warning -->
+    <rect x="10" y="115" width="180" height="50" rx="4" fill="#ffeaa7" stroke="#fdcb6e"
+      stroke-width="1" />
+    <text x="100" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="10"
+      fill="#e17055" font-weight="bold">⚠️ WARNING</text>
+    <text x="100" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="9"
+      fill="#e17055">Scripts may execute before</text>
+    <text x="100" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="9"
+      fill="#e17055">dependencies are available!</text>
+  </g>
+
+  <!-- Speed vs Reliability Chart -->
+  <g transform="translate(50, 280)">
+    <rect x="0" y="0" width="250" height="180" rx="8" fill="#ffffff" stroke="#95a5a6"
+      stroke-width="2" />
+    <text x="125" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="14"
+      font-weight="bold" fill="#2c3e50">Speed vs Reliability</text>
+
+    <!-- Y-axis: Reliability -->
+    <line x1="30" y1="40" x2="30" y2="150" stroke="#34495e" stroke-width="2" />
+    <text x="15" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="9"
+      fill="#34495e" transform="rotate(-90, 15, 45)">Reliability</text>
+    <text x="25" y="45" text-anchor="end" font-family="Arial, sans-serif" font-size="8"
+      fill="#34495e">High</text>
+    <text x="25" y="145" text-anchor="end" font-family="Arial, sans-serif" font-size="8"
+      fill="#34495e">Low</text>
+
+    <!-- X-axis: Speed -->
+    <line x1="30" y1="150" x2="220" y2="150" stroke="#34495e" stroke-width="2" />
+    <text x="125" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="9"
+      fill="#34495e">Loading Speed</text>
+    <text x="35" y="160" font-family="Arial, sans-serif" font-size="8" fill="#34495e">Slow</text>
+    <text x="210" y="160" font-family="Arial, sans-serif" font-size="8" fill="#34495e">Fast</text>
+
+    <!-- Plot points -->
+    <!-- Normal: Slow but reliable -->
+    <circle cx="70" cy="60" r="6" fill="#e74c3c" />
+    <text x="75" y="55" font-family="Arial, sans-serif" font-size="9" fill="#e74c3c"
+      font-weight="bold">Normal</text>
+
+    <!-- Async: Fast but unreliable -->
+    <circle cx="180" cy="120" r="6" fill="#f39c12" />
+    <text x="160" y="135" font-family="Arial, sans-serif" font-size="9" fill="#f39c12"
+      font-weight="bold">Async</text>
+
+    <!-- Defer: Fast and reliable -->
+    <circle cx="180" cy="60" r="6" fill="#27ae60" />
+    <text x="185" y="55" font-family="Arial, sans-serif" font-size="9" fill="#27ae60"
+      font-weight="bold">Defer</text>
+    <text x="185" y="45" font-family="Arial, sans-serif" font-size="8" fill="#27ae60">👈 Best!</text>
+  </g>
+</svg>

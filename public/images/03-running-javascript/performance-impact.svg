@@ -1,0 +1,156 @@
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#f8f9fa" />
+
+  <!-- Title -->
+  <text x="400" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="18"
+    font-weight="bold" fill="#2c3e50">Performance Impact of JavaScript Loading Methods</text>
+
+  <!-- Performance Bars Chart -->
+  <g transform="translate(50, 60)">
+    <text x="200" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16"
+      font-weight="bold" fill="#2c3e50">Page Load Time Comparison</text>
+
+    <!-- Y-axis -->
+    <line x1="30" y1="30" x2="30" y2="200" stroke="#34495e" stroke-width="2" />
+    <text x="15" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="9"
+      fill="#34495e" transform="rotate(-90, 15, 35)">Load Time (ms)</text>
+
+    <!-- Y-axis labels -->
+    <text x="25" y="35" text-anchor="end" font-family="Arial, sans-serif" font-size="9"
+      fill="#34495e">400</text>
+    <text x="25" y="65" text-anchor="end" font-family="Arial, sans-serif" font-size="9"
+      fill="#34495e">300</text>
+    <text x="25" y="95" text-anchor="end" font-family="Arial, sans-serif" font-size="9"
+      fill="#34495e">200</text>
+    <text x="25" y="125" text-anchor="end" font-family="Arial, sans-serif" font-size="9"
+      fill="#34495e">100</text>
+    <text x="25" y="155" text-anchor="end" font-family="Arial, sans-serif" font-size="9"
+      fill="#34495e">0</text>
+
+    <!-- Grid lines -->
+    <line x1="30" y1="35" x2="350" y2="35" stroke="#ecf0f1" stroke-width="1" />
+    <line x1="30" y1="65" x2="350" y2="65" stroke="#ecf0f1" stroke-width="1" />
+    <line x1="30" y1="95" x2="350" y2="95" stroke="#ecf0f1" stroke-width="1" />
+    <line x1="30" y1="125" x2="350" y2="125" stroke="#ecf0f1" stroke-width="1" />
+
+    <!-- Normal Loading Bar -->
+    <rect x="50" y="35" width="60" height="120" fill="#e74c3c" stroke="#c0392b" stroke-width="2" />
+    <text x="80" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="12"
+      font-weight="bold" fill="#e74c3c">Normal</text>
+    <text x="80" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="10"
+      fill="#e74c3c">400ms</text>
+
+    <!-- Async Loading Bar -->
+    <rect x="140" y="65" width="60" height="90" fill="#f39c12" stroke="#e67e22" stroke-width="2" />
+    <text x="170" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="12"
+      font-weight="bold" fill="#f39c12">Async</text>
+    <text x="170" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="10"
+      fill="#f39c12">330ms</text>
+
+    <!-- Defer Loading Bar -->
+    <rect x="230" y="75" width="60" height="80" fill="#27ae60" stroke="#229954" stroke-width="2" />
+    <text x="260" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="12"
+      font-weight="bold" fill="#27ae60">Defer</text>
+    <text x="260" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="10"
+      fill="#27ae60">320ms</text>
+
+    <!-- Winner indicator -->
+    <text x="260" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="16"
+      fill="#27ae60">🏆</text>
+    <text x="260" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="10"
+      fill="#27ae60" font-weight="bold">Fastest</text>
+  </g>
+
+  <!-- User Experience Metrics -->
+  <g transform="translate(450, 60)">
+    <text x="150" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16"
+      font-weight="bold" fill="#2c3e50">User Experience Impact</text>
+
+    <!-- Normal UX -->
+    <g transform="translate(0, 30)">
+      <rect x="0" y="0" width="300" height="40" rx="8" fill="#ffffff" stroke="#e74c3c"
+        stroke-width="2" />
+      <text x="10" y="20" font-family="Arial, sans-serif" font-size="12" font-weight="bold"
+        fill="#e74c3c">Normal Loading</text>
+      <text x="10" y="35" font-family="Arial, sans-serif" font-size="10" fill="#34495e">❌ Page
+        freezes during JS download</text>
+
+      <!-- Progress bar simulation -->
+      <rect x="200" y="10" width="80" height="8" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="1" />
+      <rect x="200" y="10" width="20" height="8" fill="#e74c3c" />
+      <text x="285" y="17" font-family="Arial, sans-serif" font-size="8" fill="#e74c3c">Stuck!</text>
+    </g>
+
+    <!-- Async UX -->
+    <g transform="translate(0, 90)">
+      <rect x="0" y="0" width="300" height="40" rx="8" fill="#ffffff" stroke="#f39c12"
+        stroke-width="2" />
+      <text x="10" y="20" font-family="Arial, sans-serif" font-size="12" font-weight="bold"
+        fill="#f39c12">Async Loading</text>
+      <text x="10" y="35" font-family="Arial, sans-serif" font-size="10" fill="#34495e">⚠️
+        Unpredictable pauses</text>
+
+      <!-- Progress bar simulation -->
+      <rect x="200" y="10" width="80" height="8" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="1" />
+      <rect x="200" y="10" width="45" height="8" fill="#f39c12" />
+      <text x="285" y="17" font-family="Arial, sans-serif" font-size="8" fill="#f39c12">Jerky</text>
+    </g>
+
+    <!-- Defer UX -->
+    <g transform="translate(0, 150)">
+      <rect x="0" y="0" width="300" height="40" rx="8" fill="#ffffff" stroke="#27ae60"
+        stroke-width="2" />
+      <text x="10" y="20" font-family="Arial, sans-serif" font-size="12" font-weight="bold"
+        fill="#27ae60">Defer Loading</text>
+      <text x="10" y="35" font-family="Arial, sans-serif" font-size="10" fill="#34495e">✅ Smooth,
+        uninterrupted loading</text>
+
+      <!-- Progress bar simulation -->
+      <rect x="200" y="10" width="80" height="8" fill="#27ae60" stroke="#229954" stroke-width="1" />
+      <text x="285" y="17" font-family="Arial, sans-serif" font-size="8" fill="#27ae60">Smooth!</text>
+    </g>
+  </g>
+
+  <!-- Bottom Summary -->
+  <g transform="translate(50, 300)">
+    <rect x="0" y="0" width="700" height="80" rx="10" fill="#ffffff" stroke="#bdc3c7"
+      stroke-width="2" />
+    <text x="350" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16"
+      font-weight="bold" fill="#2c3e50">Performance Summary</text>
+
+    <!-- Key metrics table -->
+    <text x="50" y="45" font-family="Arial, sans-serif" font-size="11" font-weight="bold"
+      fill="#34495e">Method</text>
+    <text x="150" y="45" font-family="Arial, sans-serif" font-size="11" font-weight="bold"
+      fill="#34495e">Load Time</text>
+    <text x="250" y="45" font-family="Arial, sans-serif" font-size="11" font-weight="bold"
+      fill="#34495e">User Experience</text>
+    <text x="400" y="45" font-family="Arial, sans-serif" font-size="11" font-weight="bold"
+      fill="#34495e">Reliability</text>
+    <text x="550" y="45" font-family="Arial, sans-serif" font-size="11" font-weight="bold"
+      fill="#34495e">Recommendation</text>
+
+    <!-- Separator -->
+    <line x1="20" y1="50" x2="680" y2="50" stroke="#bdc3c7" stroke-width="1" />
+
+    <!-- Normal -->
+    <text x="50" y="65" font-family="Arial, sans-serif" font-size="10" fill="#e74c3c">Normal</text>
+    <text x="150" y="65" font-family="Arial, sans-serif" font-size="10" fill="#e74c3c">Slowest</text>
+    <text x="250" y="65" font-family="Arial, sans-serif" font-size="10" fill="#e74c3c">Poor</text>
+    <text x="400" y="65" font-family="Arial, sans-serif" font-size="10" fill="#27ae60">High</text>
+    <text x="550" y="65" font-family="Arial, sans-serif" font-size="10" fill="#e74c3c">Avoid</text>
+
+    <!-- Defer -->
+    <text x="50" y="75" font-family="Arial, sans-serif" font-size="10" fill="#27ae60"
+      font-weight="bold">Defer</text>
+    <text x="150" y="75" font-family="Arial, sans-serif" font-size="10" fill="#27ae60"
+      font-weight="bold">Fastest</text>
+    <text x="250" y="75" font-family="Arial, sans-serif" font-size="10" fill="#27ae60"
+      font-weight="bold">Excellent</text>
+    <text x="400" y="75" font-family="Arial, sans-serif" font-size="10" fill="#27ae60"
+      font-weight="bold">High</text>
+    <text x="550" y="75" font-family="Arial, sans-serif" font-size="10" fill="#27ae60"
+      font-weight="bold">✅ Use This!</text>
+  </g>
+</svg>

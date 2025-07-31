@@ -28,6 +28,10 @@
 
   --emphasized-bg: oklch(0.999 0.01702 156.039);
   --emphasized-border: oklch(0.80284 0.02702 156.039);
+
+  --code-bg: var(--emphasized-bg);
+  --code-border: var(--emphasized-border);
+  --code-text: oklch(from var(--lesson-text) calc(l + 0.25) c h);
 }
 
 [data-theme="dark"] {
@@ -56,6 +60,10 @@
 
   --emphasized-bg: oklch(0.2 0.05 156.039);
   --emphasized-border: oklch(0.35 0.08 156.039);
+
+  --code-bg: #0d1117;
+  --code-border: var(--emphasized-border);
+  --code-text: oklch(from var(--lesson-text) calc(l - 0.2) c h);
 }
 
 .lesson-title {
