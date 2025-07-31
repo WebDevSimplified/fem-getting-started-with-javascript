@@ -2,6 +2,8 @@
 description: "Understanding why JavaScript is challenging and how this workshop provides the foundation to confidently start building real projects."
 ---
 
+<!-- TODO: Go back through and reword/fix this -->
+
 ## **Why JavaScript Feels Overwhelming**
 
 ### 1. Constant Evolution
