@@ -1,0 +1,16 @@
+order,sectionTitle,lessonTitle,slug,sectionIcon,filePath,description
+01A,Mindset,Javascript Is Hard,mindset/javascript-is-hard,brain,/lessons/mindset/javascript-is-hard,Understanding why JavaScript is challenging and how this workshop provides the foundation to confidently start building real projects.
+01B,Mindset,Don't Get Discouraged,mindset/dont-get-discouraged,brain,/lessons/mindset/dont-get-discouraged,Understanding that making mistakes is normal and part of the learning process in programming.
+02A,Tools,Basic Tools,tools/basic-tools,tools,/lessons/tools/basic-tools,Basic tools you need to download to follow along with JavaScript development.
+02B,Tools,Live Server Extension,tools/live-server-extension,tools,/lessons/tools/live-server-extension,Installing and using the Live Server extension for faster web development.
+02C,Tools,Prettier Setup,tools/prettier-setup,tools,/lessons/tools/prettier-setup,Setting up Prettier for automatic code formatting and understanding its benefits.
+03A,Running JavaScript,What Is JavaScript?,running-javascript/what-is-javascript,file-code,/lessons/running-javascript/what-is-javascript,Understanding what JavaScript is and why it's essential for modern development.
+03B,Running JavaScript,Your First JavaScript App,running-javascript/your-first-javascript-app,file-code,/lessons/running-javascript/your-first-javascript-app,Setting up your development environment and writing your very first JavaScript program.
+03C,Running JavaScript,Loading JavaScript in the Browser,running-javascript/loading-javascript-in-browser,file-code,/lessons/running-javascript/loading-javascript-in-browser,Understanding the different ways to load JavaScript and how they affect page performance.
+04A,Variable Basics,Test,variable-basics/test,cube,/lessons/variable-basics/test,""
+05A,Functions,Test,functions/test,cogs,/lessons/functions/test,""
+06A,Scope,Test,scope/test,eye,/lessons/scope/test,""
+07A,Advanced Variables,Test,advanced-variables/test,layer-group,/lessons/advanced-variables/test,""
+08A,Control Flow,Test,control-flow/test,route,/lessons/control-flow/test,""
+09A,DOM,Test,dom/test,sitemap,/lessons/dom/test,""
+10A,Debugging,Test,debugging/test,bug,/lessons/debugging/test,""
