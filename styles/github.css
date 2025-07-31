@@ -19,6 +19,8 @@ code.hljs {
 .hljs {
   color: #24292e;
   background: var(--emphasized-bg);
+  border: var(--emphasized-border) 1px solid;
+  border-radius: 0.25em;
 }
 .hljs-doctag,
 .hljs-keyword,

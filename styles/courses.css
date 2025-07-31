@@ -103,7 +103,7 @@ header .cta-btn {
 
 .jumbotron .courseInfo,
 .jumbotron .courseIcon {
-  padding: 20px;
+  padding: 40px 30px;
 }
 
 .jumbotron .courseInfo,
@@ -131,26 +131,14 @@ header .cta-btn {
     width: 100%;
     min-height: 45vh;
   }
-  .jumbotron .courseInfo,
-  .jumbotron .courseIcon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+
   .jumbotron .courseInfo {
-    width: 65%;
-    text-align: right;
-  }
-  .jumbotron .courseIcon {
-    width: 35%;
+    width: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
   }
 
-  .author {
-    justify-content: flex-end;
-  }
   .jumbotron .courseInfo-inner {
     max-width: 85%;
   }
@@ -164,6 +152,11 @@ header .cta-btn {
 .jumbotron h1 {
   font-size: 50px;
   margin-bottom: 20px;
+  text-wrap: balance;
+}
+
+.jumbotron h2 {
+  text-wrap: pretty;
 }
 
 .jumbotron .courseInfo {
@@ -508,8 +501,8 @@ ol.sections-name .lesson-details {
 
 .cta-btn:hover,
 .lesson-links a:hover {
-  background: #152837;
   color: var(--nav-buttons-text-hover);
+  opacity: 0.75;
   text-decoration: none;
 }
 
