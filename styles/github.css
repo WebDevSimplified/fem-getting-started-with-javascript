@@ -109,11 +109,3 @@ code.hljs {
   color: #b31d28;
   background-color: #ffeef0;
 }
-.hljs-char.escape_,
-.hljs-link,
-.hljs-params,
-.hljs-property,
-.hljs-punctuation,
-.hljs-tag {
-  /* purposely ignored */
-}

@@ -37,7 +37,7 @@
 
   --text-header: var(--primary);
   --text-main-headers: var(--highlight);
-  --text-links: oklch(0.6137 0.1434 254.624);
+  --text-links: oklch(0.7137 0.1434 254.624);
   --text-footer: var(--highlight);
 
   --lesson-text: oklch(0.85 0.01 0);
@@ -71,5 +71,5 @@
 }
 
 li {
-  color: var(--highlight);
+  /* color: var(--highlight); */
 }
