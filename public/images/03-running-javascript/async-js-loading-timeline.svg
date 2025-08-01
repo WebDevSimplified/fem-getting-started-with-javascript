@@ -22,22 +22,22 @@
 
     <!-- Timeline bars -->
     <!-- HTML Parse (with interruption) -->
-    <rect x="200" y="20" width="167" height="36" rx="6" fill="#10b981" stroke="#059669"
+    <rect x="200" y="20" width="284" height="36" rx="6" fill="#10b981" stroke="#059669"
       stroke-width="1" />
-    <text x="283" y="45" text-anchor="middle" font-family="Inter, -apple-system, sans-serif"
+    <text x="342" y="45" text-anchor="middle" font-family="Inter, -apple-system, sans-serif"
       font-size="18" font-weight="600" fill="white">HTML Parse</text>
 
     <!-- JS Execute (interrupts) -->
-    <rect x="367" y="20" width="167" height="36" rx="6" fill="#dc2626" stroke="#b91c1c"
+    <rect x="484" y="20" width="167" height="36" rx="6" fill="#dc2626" stroke="#b91c1c"
       stroke-width="1" />
-    <text x="450" y="45" text-anchor="middle" font-family="Inter, -apple-system, sans-serif"
+    <text x="567" y="45" text-anchor="middle" font-family="Inter, -apple-system, sans-serif"
       font-size="18" font-weight="600" fill="white">Execute</text>
 
     <!-- HTML Parse Resume -->
-    <rect x="534" y="20" width="167" height="36" rx="6" fill="#10b981" stroke="#059669"
+    <rect x="651" y="20" width="50" height="36" rx="6" fill="#10b981" stroke="#059669"
       stroke-width="1" />
-    <text x="617" y="45" text-anchor="middle" font-family="Inter, -apple-system, sans-serif"
-      font-size="18" font-weight="600" fill="white">HTML Resume</text>
+    <text x="676" y="80" text-anchor="middle" font-family="Inter, -apple-system, sans-serif"
+      font-size="18" font-weight="600" fill="#10b981">HTML Resume</text>
 
     <!-- JS Download (parallel) -->
     <rect x="234" y="62" width="250" height="36" rx="6" fill="#f59e0b" stroke="#d97706"

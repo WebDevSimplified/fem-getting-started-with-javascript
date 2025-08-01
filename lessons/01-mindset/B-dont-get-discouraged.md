@@ -53,5 +53,3 @@ The majority of programming is **debugging** and **problem-solving**.
 4. **Debugging = Core skill** (not weakness)
 
 **Bottom Line:** Mistakes don't make you a bad developer - they make you a real developer.
-
-![Learning Progress](/fem-getting-started-with-javascript/images/01-mindset/learning-progress.svg)

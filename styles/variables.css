@@ -26,7 +26,7 @@
   --icons: var(--highlight);
   --footer-icons: var(--highlight);
 
-  --emphasized-bg: oklch(0.999 0.01702 156.039);
+  --emphasized-bg: oklch(0.985 0.005 156.039);
   --emphasized-border: oklch(0.80284 0.02702 156.039);
 
   --code-bg: var(--emphasized-bg);

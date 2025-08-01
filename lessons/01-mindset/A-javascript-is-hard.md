@@ -3,6 +3,7 @@ description: "Understanding why JavaScript is challenging and how this workshop 
 ---
 
 <!-- TODO: Go back through and reword/fix this -->
+<!-- TODO: Add H1 to each page? -->
 
 ## **Why JavaScript Feels Overwhelming**
 
