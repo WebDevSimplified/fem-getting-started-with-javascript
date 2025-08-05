@@ -524,50 +524,20 @@ pre {
   position: relative;
 }
 
-.div-copy {
+.copy-btn {
   position: absolute;
   top: 0;
   right: 0;
+  color: var(--text-main);
+  background: var(--primary);
+  border: 1px solid var(--code-border);
+  padding: 0.35em 0.65em;
+  cursor: pointer;
+  border-radius: 0.25em;
 }
 
-.div-copy .tooltip-copy::after {
-  content: "";
-  position: absolute;
-  right: 100%;
-  margin-right: -4px;
-  top: 60%;
-  transform: translateY(-50%);
-  border-style: solid;
-  border-width: 2px 2px 5px 8px;
-  border-color: transparent transparent transparent #444;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.div-copy .tooltip-copy::before {
-  content: "Copied";
-  position: absolute;
-  top: 60%;
-  transform: translateY(-50%);
-  right: 100%;
-  margin-right: 5px;
-  padding: 2px 7px;
-  border-radius: 5px;
-  background: #444;
-  color: #fff;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.div-copy .tooltip-copy {
-  margin-right: 0.3em;
-  margin-top: 0.3em;
-}
-
-.div-copy.clicked .tooltip-copy::before,
-.div-copy.clicked .tooltip-copy::after {
-  opacity: 1;
+.copy-btn:hover {
+  background: oklch(from var(--primary) calc(l + 0.02) c h);
 }
 
 .lesson-content :is(h1, h2, h3, h4, h5, h6) {
@@ -587,6 +557,33 @@ pre {
   background: var(--code-bg);
   border: var(--code-border) 1px solid;
   border-radius: 0.25em;
-  padding: 0.5em 0.75em;
+  padding: 0.25em 0.5em;
   color: var(--code-text);
+  white-space: nowrap;
+}
+
+.lesson-content pre {
+  line-height: 1.5;
+}
+
+.lesson-content table {
+  border-collapse: collapse;
+  margin: 1rem 0;
+  width: 100%;
+
+  code {
+    font-size: 0.9rem;
+  }
+}
+
+.lesson-content .side-by-side-tables {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: flex-start;
+
+  @media (max-width: 750px) {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
 }

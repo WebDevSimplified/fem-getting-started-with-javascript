@@ -4,6 +4,7 @@ description: "Understanding why JavaScript is challenging and how this workshop 
 
 <!-- TODO: Go back through and reword/fix this -->
 <!-- TODO: Add H1 to each page? -->
+<!-- TODO: Maybe mention in the workshop (or on some page) that students should feel free to experiment as I am talking and/or pause the video to experiment with the different things I talk about since nothing beats trying it out yourself. If they ever have the question of "I wonder how this works" encourage them to try it themselves to experiment with it instead of asking AI or Googling it. -->
 
 ## **Why JavaScript Feels Overwhelming**
 

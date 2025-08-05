@@ -118,3 +118,28 @@ consol.log("Hello World")
 // ✅ Correct
 console.log("Hello World")
 ```
+
+## Comments In JavaScript
+
+Comments can be added to your code to make it easier to understand. They are ignored by the JavaScript engine.
+
+### Single-line Comments
+
+Use `//` to add a comment on a single line:
+
+```javascript
+// This is a single-line comment
+console.log("Hello World") // This will print "Hello World"
+```
+
+### Multi-line Comments
+
+Use `/* ... */` to add comments that span multiple lines:
+
+```javascript
+/*
+  This is a multi-line comment
+  It can span multiple lines
+*/
+console.log("Hello World")
+```

@@ -14,8 +14,13 @@ Writing perfectly formatted code is time consuming so we let Prettier handle it 
 
 Both of these code examples work exactly the same, but one is much harder to read:
 
+<!-- prettier-ignore -->
 ```javascript
-console.log("Hello World")
+console.log
+(
+  
+     "Hello World"
+  )
 ```
 
 ```javascript
@@ -66,8 +71,13 @@ Find and install the Prettier extension for your text editor.
 
 1. Create messy code:
 
+<!-- prettier-ignore -->
 ```javascript
-console.log("Hello World")
+console.log
+(
+  
+     "Hello World"
+  )
 ```
 
 2. Save the file
