@@ -12,7 +12,7 @@ Live Server creates a local development server and **automatically refreshes** y
 2. Save file
 3. Switch to browser
 4. Manually refresh page
-5. Switch back to VS Code
+5. Switch back to VSCode
 6. Repeat for every change
 
 ### With Live Server 🎉
@@ -23,7 +23,7 @@ Live Server creates a local development server and **automatically refreshes** y
 
 ## Installing Live Server
 
-1. Click the **Extensions** button in VS Code
+1. Click the **Extensions** button in VSCode
 2. Search for "**Live Server**"
 3. Install the one with tens of millions of downloads (by Ritwick Dey)
 

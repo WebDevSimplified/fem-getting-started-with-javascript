@@ -43,9 +43,9 @@ Setup Prettier to automatically fix formatting when you save your file.
 
 Find and install the Prettier extension for your text editor.
 
-### 1. Install VS Code Extension
+### 1. Install VSCode Extension
 
-1. Click the **Extensions** button in VS Code
+1. Click the **Extensions** button in VSCode
 2. Search for "**Prettier - Code formatter**"
 3. Install the one with tens of millions of downloads
 
@@ -89,7 +89,7 @@ console.log("Hello World")
 
 ## Optional: Configure Prettier Settings
 
-You can modify Prettier settings in your VS Code settings file.
+You can modify Prettier settings in your VSCode settings file.
 
 1. Open **Settings**
 2. Search for "**Prettier**"

@@ -9,12 +9,12 @@ Let's write your very first JavaScript program! We'll create the classic "Hello 
 
 ## Setting Up Your Workspace
 
-1. Open VS Code
+1. Open VSCode
 2. Create a Project Folder
    - Click **File** → **Open Folder**
    - Choose or create a new folder for your project
 
-### VS Code Layout
+### VSCode Layout
 
 Once your folder is open, you'll see:
 
@@ -34,7 +34,7 @@ Once your folder is open, you'll see:
 
 - Click the **New File** button in the sidebar
 - Name it: `script.js`
-- The `.js` extension tells VS Code this is JavaScript
+- The `.js` extension tells VSCode this is JavaScript
 
 ### 2. Write Your First Code
 

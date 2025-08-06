@@ -44,7 +44,7 @@ Alternatives:
 - [Web Storm](https://www.jetbrains.com/webstorm/)
 - [Cursor](https://cursor.so/)
 
-### Why VS Code?
+### Why VSCode?
 
 - Same editor I'll be using
 - Built specifically for web development
