@@ -35,8 +35,6 @@ console.log(a) // null
 
 By setting a value to `null`, you are explicitly saying this variable has **no value**.
 
-<!-- TODO: Use analogy of a box. If you ask someone what is in a box you would tell them there is nothing in the box by using null. -->
-
 ## Best Practices
 
 1. Use `null` for Intentional "Empty" States

@@ -2,12 +2,9 @@
 description: "Understanding why JavaScript is challenging and how this workshop provides the foundation to confidently start building real projects."
 ---
 
-<!-- TODO: Go back through and reword/fix this -->
-<!-- TODO: Maybe mention in the workshop (or on some page) that students should feel free to experiment as I am talking and/or pause the video to experiment with the different things I talk about since nothing beats trying it out yourself. If they ever have the question of "I wonder how this works" encourage them to try it themselves to experiment with it instead of asking AI or Googling it. -->
-
 # Learning JavaScript is Hard
 
-JavaScript isn't the hardest language to learn, but it also isn't the easiest. It doesn't matter what language you choose, learning to code is a challenge. JavaScript in particular has many complexities that can make it feel overwhelming which we will be covering through this workshop.
+It doesn't matter what language you choose, learning to code is a challenge. JavaScript in particular has many complexities that can make it feel overwhelming which we will be helping you overcome throughout this workshop.
 
 ## Why JavaScript Feels Overwhelming
 
@@ -25,49 +22,39 @@ JavaScript isn't the hardest language to learn, but it also isn't the easiest. I
 
 3. Information Overload
 
-   Hard to know:
-
    - What's the best technique?
    - What's old vs. new?
    - What should I actually use?
 
-## Our Workshop Approach
+## How This Workshop Helps
 
-**Reality Check:** We can't cover everything in one day.
-
-**Our Goal:** Solid foundation + confidence to build projects.
-
-**Today's Focus:**
-
-- Core fundamentals only
-- Modern JavaScript
-- Hands-on practice
-- Foundation for continued learning
-
-## Workshop Goals
-
-By the end of today:
+By the end of this workshop you will:
 
 ✅ **Understand** how JavaScript works  
-✅ **Write** basic JavaScript programs  
-✅ **Debug** simple issues  
+✅ **Be able to write** your own JavaScript apps  
+✅ **Debug** coding issues  
 ✅ **Feel confident** starting projects
 
-## What We Cover vs. Don't Cover
+**Goal of this workshop:** Give you the tools and confidence to build your own projects from scratch.
 
-### ✅ **We Will Cover**
+### ✅ We Will Cover
 
-- Core concepts for every JS project
+- Core JavaScript concepts
 - Modern syntax and best practices
-- Hands-on exercises
-- Real examples to build upon
+- How to debug like a professional
+- Detailed explanations of the most confusing parts of JavaScript
 
-### ❌ **We Won't Cover**
+### ❌ We Won't Cover
 
 - Every JavaScript feature
 - Advanced frameworks
 - Complex algorithms
-- Production deployment
+
+### How To Get The Most Out of This Workshop
+
+The best way to learn is by doing, so as I am explaining concepts, try them out in your own code editor.
+
+If you ever have the question of "I wonder what happens if I do X?" try it out. There is only so much you can learn from listening to me. The real learning happens when you **try things out yourself**.
 
 ## Key Mindset
 
@@ -76,4 +63,4 @@ By the end of today:
 3. **This is your starting point** - not the finish line
 4. **Practice makes progress** - engage with exercises
 
-**Bottom Line:** JavaScript is complex, but you **can** start building today!
+**Bottom Line:** JavaScript is complex, but you **can** learn to build apps with it!

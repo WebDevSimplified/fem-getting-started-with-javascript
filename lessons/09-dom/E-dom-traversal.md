@@ -260,7 +260,3 @@ editBtn.addEventListener("click", () => {
 ```
 
 By using `closest` and `querySelector`, our code can adapt to changes in the HTML structure without breaking.
-
-<!-- TODO: Maybe add pages for storage, data-attributes, event loop, fetch, practice problem -->
-<!-- TODO: Maybe add a section for async code (promises, async await) -->
-<!-- TODO: Maybe add a section for modules/bundlers -->

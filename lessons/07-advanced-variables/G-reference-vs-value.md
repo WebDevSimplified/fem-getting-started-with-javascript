@@ -212,6 +212,3 @@ addElement(numbers, 4)
 
 console.log(numbers) // [1, 2, 3, 4] ← Original array modified
 ```
-
-<!-- TODO: Maybe add array methods article -->
-<!-- TODO: Maybe add new/this article -->
