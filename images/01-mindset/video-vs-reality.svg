@@ -1,0 +1,45 @@
+<svg width="500" height="200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="500" height="200" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2" rx="10" />
+
+  <!-- What You See in Videos -->
+  <rect x="30" y="20" width="200" height="160" fill="#d4edda" stroke="#c3e6cb" stroke-width="2"
+    rx="5" />
+  <text x="130" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="14"
+    font-weight="bold" fill="#155724">📹 What You See</text>
+
+  <text x="50" y="70" font-family="Arial, sans-serif" font-size="12" fill="#155724">✨ Perfect Code</text>
+  <text x="50" y="90" font-family="Arial, sans-serif" font-size="12" fill="#155724">✨ No Mistakes</text>
+  <text x="50" y="110" font-family="Arial, sans-serif" font-size="12" fill="#155724">✨ Fast Typing</text>
+  <text x="50" y="130" font-family="Arial, sans-serif" font-size="12" fill="#155724">✨ Immediate
+    Solutions</text>
+  <text x="50" y="150" font-family="Arial, sans-serif" font-size="12" fill="#155724">✨ 30 min video</text>
+
+  <!-- Reality Behind the Scenes -->
+  <rect x="270" y="20" width="200" height="160" fill="#f8d7da" stroke="#f5c6cb" stroke-width="2"
+    rx="5" />
+  <text x="370" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="14"
+    font-weight="bold" fill="#721c24">🔍 Reality</text>
+
+  <text x="290" y="70" font-family="Arial, sans-serif" font-size="12" fill="#721c24">📝 Pre-written
+    Code</text>
+  <text x="290" y="90" font-family="Arial, sans-serif" font-size="12" fill="#721c24">🎬 Multiple
+    Takes</text>
+  <text x="290" y="110" font-family="Arial, sans-serif" font-size="12" fill="#721c24">✂️ Heavy
+    Editing</text>
+  <text x="290" y="130" font-family="Arial, sans-serif" font-size="12" fill="#721c24">⏰ Hours of
+    Debugging</text>
+  <text x="290" y="150" font-family="Arial, sans-serif" font-size="12" fill="#721c24">⏰ 3+ hours
+    actual work</text>
+
+  <!-- Arrow -->
+  <path d="M 240 100 L 260 100" stroke="#6c757d" stroke-width="2" fill="none"
+    marker-end="url(#arrowhead)" />
+
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon points="0 0, 8 2.5, 0 5" fill="#6c757d" />
+    </marker>
+  </defs>
+</svg>
