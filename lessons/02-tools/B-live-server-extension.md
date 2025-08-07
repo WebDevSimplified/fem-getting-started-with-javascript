@@ -2,11 +2,11 @@
 description: "Installing and using the Live Server extension for faster web development."
 ---
 
-## What Is Live Server?
+# Live Server Extension
 
 Live Server creates a local development server and **automatically refreshes** your browser when you save changes to your files.
 
-### Without Live Server 😩
+**Without Live Server 😩**
 
 1. Write code
 2. Save file
@@ -15,7 +15,7 @@ Live Server creates a local development server and **automatically refreshes** y
 5. Switch back to VSCode
 6. Repeat for every change
 
-### With Live Server 🎉
+**With Live Server 🎉**
 
 1. Write code
 2. Save file

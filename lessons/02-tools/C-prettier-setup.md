@@ -2,7 +2,7 @@
 description: "Setting up Prettier for automatic code formatting and understanding its benefits."
 ---
 
-## What Is Prettier?
+# Prettier Setup
 
 Prettier is a code formatter that automatically formats your code to make it clean and readable.
 

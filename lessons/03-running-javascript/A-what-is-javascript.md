@@ -3,9 +3,9 @@ title: "What Is JavaScript?"
 description: "Understanding what JavaScript is and why it's essential for modern development."
 ---
 
-## JavaScript Is Everywhere
+# What Is JavaScript?
 
-JavaScript is primarily used for web development, but it can be run in many environments.
+JavaScript is a scripting language primarily used for web development, but it can be run in many environments.
 
 ### 1. **Browser (Frontend)**
 

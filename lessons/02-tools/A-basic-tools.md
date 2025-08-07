@@ -2,6 +2,8 @@
 description: "Basic tools you need to download to follow along with JavaScript development."
 ---
 
+# Basic Tools
+
 You need 3 basic tools to follow along.
 
 ## 1. Web Browser

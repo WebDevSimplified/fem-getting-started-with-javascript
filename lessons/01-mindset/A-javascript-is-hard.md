@@ -3,30 +3,33 @@ description: "Understanding why JavaScript is challenging and how this workshop 
 ---
 
 <!-- TODO: Go back through and reword/fix this -->
-<!-- TODO: Add H1 to each page? -->
 <!-- TODO: Maybe mention in the workshop (or on some page) that students should feel free to experiment as I am talking and/or pause the video to experiment with the different things I talk about since nothing beats trying it out yourself. If they ever have the question of "I wonder how this works" encourage them to try it themselves to experiment with it instead of asking AI or Googling it. -->
 
-## **Why JavaScript Feels Overwhelming**
+# Learning JavaScript is Hard
 
-### 1. Constant Evolution
+JavaScript isn't the hardest language to learn, but it also isn't the easiest. It doesn't matter what language you choose, learning to code is a challenge. JavaScript in particular has many complexities that can make it feel overwhelming which we will be covering through this workshop.
 
-Web development changes fast → JavaScript changes even faster
+## Why JavaScript Feels Overwhelming
 
-### 2. Multiple Ways to Do Everything
+1. Constant Evolution
 
-- Legacy ways
-- Modern ways
-- Hacks and workarounds
-- Framework-specific methods
-- 3rd party libraries
+   Web development changes fast → JavaScript changes even faster
 
-### 3. Information Overload
+2. Multiple Ways to Do Everything
 
-Hard to know:
+   - Legacy ways
+   - Modern ways
+   - Hacks and workarounds
+   - Framework-specific methods
+   - 3rd party libraries
 
-- What's the best technique?
-- What's old vs. new?
-- What should I actually use?
+3. Information Overload
+
+   Hard to know:
+
+   - What's the best technique?
+   - What's old vs. new?
+   - What should I actually use?
 
 ## Our Workshop Approach
 
