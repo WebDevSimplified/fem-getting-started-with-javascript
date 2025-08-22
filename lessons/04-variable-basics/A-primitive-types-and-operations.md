@@ -89,7 +89,7 @@ Operations are actions you can perform with primitive values. Each type supports
 
   ```javascript
   "apple" == "apple" // true
-  "apple" != "apple" // true
+  "apple" != "apple" // false
 
   // Alphabetical comparison
   "apple" < "banana" // true ("apple" comes before "banana")

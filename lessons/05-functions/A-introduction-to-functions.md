@@ -119,6 +119,24 @@ add(num1, num2) // Prints 15
 add(3, 7) // You can also pass values directly
 ```
 
+## Returning Values with `return`
+
+So far, our functions have only printed results. But functions can also **return** values using the `return` keyword. This lets you use the result elsewhere in your code:
+
+```javascript
+function add(x, y) {
+  return x + y
+}
+
+let sum = add(2, 3)
+console.log(sum) // 5
+console.log(add(10, 7)) // 17
+```
+
+When a function hits a `return` statement, it immediately stops and gives back the value. You can then store that value in a variable or use it directly.
+
+If you don't use `return`, the function returns `undefined` by default.
+
 ## Common Syntax Mistakes
 
 - Missing Parentheses
