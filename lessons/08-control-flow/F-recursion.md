@@ -77,10 +77,24 @@ function countdown(n) {
   console.log(n)
   if (n <= 0) return
 
+  console.log("Before")
   countdown(n - 1)
+  console.log("After")
 }
 
 countdown(3)
+
+// Output:
+// 3
+// Before
+// 2
+// Before
+// 1
+// Before
+// 0
+// After
+// After
+// After
 ```
 
 **Call stack visualization:**
@@ -95,142 +109,47 @@ countdown(3) calls countdown(2)
 countdown(3) returns
 ```
 
-## Recursion vs Loops
-
-Let's compare solving the same problem with recursion and loops:
-
-### Problem: Calculate factorial (5! = 5 × 4 × 3 × 2 × 1)
-
-**With a for loop:**
-
-```javascript
-function factorialLoop(n) {
-  let result = 1
-  for (let i = 1; i <= n; i++) {
-    result *= i
-  }
-  return result
-}
-
-console.log(factorialLoop(5)) // 120
-```
-
-**With recursion:**
-
-```javascript
-function factorialRecursive(n) {
-  // Base case
-  if (n <= 1) return 1
-
-  // Recursive case
-  return n * factorialRecursive(n - 1)
-}
-
-console.log(factorialRecursive(5)) // 120
-```
-
-**How `factorialRecursive(5)` works:**
-
-```text
-factorialRecursive(5) = 5 * factorialRecursive(4)
-factorialRecursive(4) = 4 * factorialRecursive(3)
-factorialRecursive(3) = 3 * factorialRecursive(2)
-factorialRecursive(2) = 2 * factorialRecursive(1)
-factorialRecursive(1) = 1 (base case)
-
-Working backwards:
-factorialRecursive(1) = 1
-factorialRecursive(2) = 2 * 1 = 2
-factorialRecursive(3) = 3 * 2 = 6
-factorialRecursive(4) = 4 * 6 = 24
-factorialRecursive(5) = 5 * 24 = 120
-```
-
 ## When to Use Recursion
 
-1. Tree-like Data Structures
+Tree-like Data Structures
 
-   ```javascript
-   const fileSystem = {
-     name: "root",
-     type: "folder",
-     children: [
-       {
-         name: "documents",
-         type: "folder",
-         children: [
-           { name: "resume.pdf", type: "file" },
-           { name: "notes.txt", type: "file" },
-         ],
-       },
-       {
-         name: "photos",
-         type: "folder",
-         children: [{ name: "vacation.jpg", type: "file" }],
-       },
-       { name: "readme.txt", type: "file" },
-     ],
-   }
+```javascript
+const fileSystem = {
+  name: "root",
+  type: "folder",
+  children: [
+    {
+      name: "documents",
+      type: "folder",
+      children: [
+        { name: "resume.pdf", type: "file" },
+        { name: "notes.txt", type: "file" },
+      ],
+    },
+    {
+      name: "photos",
+      type: "folder",
+      children: [{ name: "vacation.jpg", type: "file" }],
+    },
+    { name: "readme.txt", type: "file" },
+  ],
+}
 
-   // Count all files in the file system
-   function countFiles(item) {
-     // Base case: if it's a file, count it
-     if (item.type === "file") return 1
+// Count all files in the file system
+function countFiles(item) {
+  // Base case: if it's a file, count it
+  if (item.type === "file") return 1
 
-     // Recursive case: if it's a folder, count files in all children
-     let count = 0
-     for (const child of item.children) {
-       count += countFiles(child) // Recursive call for each child
-     }
-     return count
-   }
+  // Recursive case: if it's a folder, count files in all children
+  let count = 0
+  for (const child of item.children) {
+    count += countFiles(child) // Recursive call for each child
+  }
+  return count
+}
 
-   console.log(countFiles(fileSystem)) // 4 files total
-   ```
-
-2. Mathematical Sequences
-
-   **Fibonacci sequence:** Each number is the sum of the two preceding numbers (0, 1, 1, 2, 3, 5, 8, 13...)
-
-   ```javascript
-   function fibonacci(n) {
-     // Base cases
-     if (n <= 0) return 0
-     if (n === 1) return 1
-
-     // Recursive case
-     return fibonacci(n - 1) + fibonacci(n - 2)
-   }
-
-   console.log(fibonacci(6)) // 8
-   console.log(fibonacci(10)) // 55
-   ```
-
-3. Processing Nested Objects
-
-   ```javascript
-   const person = {
-     name: "Kyle",
-     friend: {
-       name: "Joe",
-       friend: {
-         name: "Sally",
-         friend: null,
-       },
-     },
-   }
-
-   // Find the person at the end of the friend chain
-   function findLastFriend(person) {
-     // Base case: no more friends
-     if (person.friend === null) return person.name
-
-     // Recursive case: check the friend's friend
-     return findLastFriend(person.friend)
-   }
-
-   console.log(findLastFriend(person)) // "Sally"
-   ```
+console.log(countFiles(fileSystem)) // 4 files total
+```
 
 ## Common Mistakes
 

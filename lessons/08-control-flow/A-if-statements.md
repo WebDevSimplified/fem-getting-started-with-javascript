@@ -210,6 +210,7 @@ Alternative solution using guard clauses:
 ```javascript
 const age = 17
 const hasDriversEd = true
+
 if (age < 16) {
   console.log("You must be at least 16")
   return

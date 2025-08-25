@@ -128,7 +128,7 @@ const config = {
 
 // Using || (considers 0 as falsy)
 const timeout1 = config.timeout || 5000 // 5000 (❌)
-const debug = config.debug ?? true // true (✅)
+const debug = config.debug || true // true (✅)
 
 // Using ?? (only considers null/undefined as falsy)
 const timeout2 = config.timeout ?? 5000 // 0 (✅)

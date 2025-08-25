@@ -180,37 +180,6 @@ const nonExistent = deleteBtn.closest(".does-not-exist")
 console.log(nonExistent) // null
 ```
 
-#### Practical Example with `closest()`
-
-```html
-<div class="todo-list">
-  <div class="todo-item" data-id="1">
-    <span class="todo-text">Buy groceries</span>
-    <button class="delete-btn">Delete</button>
-  </div>
-  <div class="todo-item" data-id="2">
-    <span class="todo-text">Walk the dog</span>
-    <button class="delete-btn">Delete</button>
-  </div>
-</div>
-```
-
-```javascript
-const list = document.querySelector(".todo-list")
-// Using event delegation with closest()
-list.addEventListener("click", (e) => {
-  // Find the todo item that contains the clicked button
-  const todoItem = e.target.closest(".todo-item")
-
-  const todoId = todoItem.dataset.id
-
-  if (e.target.matches(".delete-btn")) {
-    console.log(`Deleting todo ${todoId}`)
-    todoItem.remove()
-  }
-})
-```
-
 ## Prefer `closest` and `querySelector` Over Other Methods
 
 If you use `children`, `nextElementSibling`, `previousElementSibling`, and `parentElement` too much, your code can become brittle and break if the HTML structure changes.

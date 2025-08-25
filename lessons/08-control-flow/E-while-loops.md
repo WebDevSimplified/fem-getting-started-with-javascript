@@ -25,6 +25,7 @@ The loop continues as long as the condition in parentheses is `true` and stops w
 
 Here's how a for loop translates to a while loop:
 
+<!-- prettier-ignore -->
 ```javascript
 // For loop
 for (let i = 0; i < 5; i++) {
@@ -33,8 +34,7 @@ for (let i = 0; i < 5; i++) {
 
 // Equivalent while loop
 let i = 0 // Initialization (outside the loop)
-while (i < 5) {
-  // Condition (same as for loop)
+while (i < 5) { // Condition (same as for loop)
   console.log(i) // Code to run
   i++ // Increment (inside the loop)
 }
@@ -113,66 +113,3 @@ do {
 ```
 
 The key difference: `do-while` checks the condition **after** running the code block.
-
-## Exercise
-
-Write a while loop that simulates a simple guessing game:
-
-1. Generate a random number between 1 and 10
-2. Keep asking the user to guess until they get it right
-3. Track the number of attempts
-4. Give hints ("too high" or "too low")
-
-<details>
-<summary>Solution</summary>
-
-```javascript
-function guessingGame() {
-  const secretNumber = Math.floor(Math.random() * 10) + 1
-  let guess
-  let attempts = 0
-
-  console.log("Guess the number between 1 and 10!")
-
-  while (guess !== secretNumber) {
-    guess = parseInt(prompt("Enter your guess:"))
-    attempts++
-
-    if (guess < secretNumber) {
-      console.log("Too low!")
-    } else if (guess > secretNumber) {
-      console.log("Too high!")
-    } else {
-      console.log(`Correct! You got it in ${attempts} attempts.`)
-    }
-  }
-}
-```
-
-Alternative solution using `break`:
-
-```javascript
-function guessingGame() {
-  const secretNumber = Math.floor(Math.random() * 10) + 1
-  let guess
-  let attempts = 0
-
-  console.log("Guess the number between 1 and 10!")
-
-  while (true) {
-    guess = parseInt(prompt("Enter your guess:"))
-    attempts++
-
-    if (guess < secretNumber) {
-      console.log("Too low!")
-    } else if (guess > secretNumber) {
-      console.log("Too high!")
-    } else {
-      console.log(`Correct! You got it in ${attempts} attempts.`)
-      break
-    }
-  }
-}
-```
-
-</details>
