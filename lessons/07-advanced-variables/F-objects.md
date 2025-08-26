@@ -13,13 +13,13 @@ An object is a collection of related information stored together in key-value pa
 ```javascript
 // Separate variables (not organized)
 const name = "Kyle"
-const age = 25
+const age = 30
 const favoriteNumber = 3
 
 // Object (organized together)
 const person = {
   name: "Kyle",
-  age: 25,
+  age: 30,
   favoriteNumber: 3,
 }
 ```
@@ -31,7 +31,7 @@ Use curly braces `{}` to create objects, with key-value pairs separated by comma
 ```javascript
 const person = {
   name: "Kyle",
-  age: 25,
+  age: 30,
   favoriteNumber: 3,
 }
 ```
@@ -48,7 +48,7 @@ Keys use the same naming conventions as variables (camelCase, no spaces) and the
 ```javascript
 const person = {
   name: "Kyle", // key: "name", value: "Kyle"
-  age: 25, // key: "age", value: 25
+  age: 30, // key: "age", value: 30
   favoriteNumber: 3, // key: "favoriteNumber", value: 3
 }
 ```
@@ -60,12 +60,12 @@ Use dot notation to access properties:
 ```javascript
 const person = {
   name: "Kyle",
-  age: 25,
+  age: 30,
   favoriteNumber: 3,
 }
 
 console.log(person.name) // "Kyle"
-console.log(person.age) // 25
+console.log(person.age) // 30
 console.log(person.favoriteNumber) // 3
 ```
 
@@ -76,7 +76,7 @@ Objects can contain functions (often called **methods** when inside objects):
 ```javascript
 const person = {
   name: "Kyle",
-  age: 25,
+  age: 30,
   favoriteNumber: 3,
   sayHi: function () {
     console.log("Hi")
@@ -93,7 +93,7 @@ You can write functions in objects without the `function` keyword:
 ```javascript
 const person = {
   name: "Kyle",
-  age: 25,
+  age: 30,
   favoriteNumber: 3,
   sayHi() {
     console.log("Hi")

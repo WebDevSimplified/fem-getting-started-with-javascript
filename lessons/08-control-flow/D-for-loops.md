@@ -179,7 +179,7 @@ for (let i = 1; i <= 3; i++) {
   ```javascript
   const person = {
     name: "Kyle",
-    age: 25,
+    age: 30,
     city: "New York",
   }
 
@@ -188,7 +188,7 @@ for (let i = 1; i <= 3; i++) {
   }
   // Output:
   // name: Kyle
-  // age: 25
+  // age: 30
   // city: New York
   ```
 
