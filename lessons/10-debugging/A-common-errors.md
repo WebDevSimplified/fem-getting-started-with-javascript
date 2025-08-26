@@ -185,7 +185,7 @@ JavaScript error messages can seem intimidating, but they contain valuable infor
 
 ### Anatomy of an Error Message
 
-```
+```text
 TypeError: Cannot read property 'name' of null
     at getUserName (script.js:15:20)
     at main (script.js:8:5)
