@@ -27,7 +27,7 @@ img {
 body {
   font-family: "Open Sans";
   background: linear-gradient(90deg, var(--bg-main) 15px, transparent 1%) center,
-    linear-gradient(var(--bg-main) 15px, transparent 1%) center, var(--bg-dots);
+    linear-gradient(var(--bg-main) 15px, transparent 1%) center;
   background-size: 16px 16px;
   margin: 0;
 }
