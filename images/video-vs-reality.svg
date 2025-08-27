@@ -1,0 +1,49 @@
+<svg width="600" height="300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="600" height="300" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2" rx="10" />
+
+  <!-- Title -->
+  <text x="300" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="18"
+    font-weight="bold" fill="#343a40">Video vs Reality</text>
+
+  <!-- What You See in Videos -->
+  <rect x="50" y="60" width="220" height="180" fill="#d4edda" stroke="#c3e6cb" stroke-width="2"
+    rx="5" />
+  <text x="160" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="14"
+    font-weight="bold" fill="#155724">📹 What You See</text>
+
+  <text x="70" y="110" font-family="Arial, sans-serif" font-size="12" fill="#155724">✨ Perfect Code</text>
+  <text x="70" y="130" font-family="Arial, sans-serif" font-size="12" fill="#155724">✨ No Mistakes</text>
+  <text x="70" y="150" font-family="Arial, sans-serif" font-size="12" fill="#155724">✨ Fast Typing</text>
+  <text x="70" y="170" font-family="Arial, sans-serif" font-size="12" fill="#155724">✨ Immediate
+    Solutions</text>
+  <text x="70" y="190" font-family="Arial, sans-serif" font-size="12" fill="#155724">✨ 30 min video</text>
+
+  <!-- Reality Behind the Scenes -->
+  <rect x="330" y="60" width="220" height="180" fill="#f8d7da" stroke="#f5c6cb" stroke-width="2"
+    rx="5" />
+  <text x="440" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="14"
+    font-weight="bold" fill="#721c24">🔍 Reality</text>
+
+  <text x="350" y="110" font-family="Arial, sans-serif" font-size="12" fill="#721c24">📝 Pre-written
+    Code</text>
+  <text x="350" y="130" font-family="Arial, sans-serif" font-size="12" fill="#721c24">🎬 Multiple
+    Takes</text>
+  <text x="350" y="150" font-family="Arial, sans-serif" font-size="12" fill="#721c24">✂️ Heavy
+    Editing</text>
+  <text x="350" y="170" font-family="Arial, sans-serif" font-size="12" fill="#721c24">⏰ Hours of
+    Preparation</text>
+  <text x="350" y="190" font-family="Arial, sans-serif" font-size="12" fill="#721c24">⏰ 3+ hours
+    actual work</text>
+
+  <!-- Arrow -->
+  <path d="M 280 150 L 320 150" stroke="#6c757d" stroke-width="3" fill="none"
+    marker-end="url(#arrowhead)" />
+
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6c757d" />
+    </marker>
+  </defs>
+</svg>

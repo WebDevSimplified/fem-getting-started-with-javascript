@@ -1,0 +1,266 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8" data-next-head=""/><meta name="viewport" content="width=device-width" data-next-head=""/><link rel="apple-touch-icon" sizes="180x180" href="/fem-getting-started-with-javascript/images/apple-touch-icon.png" data-next-head=""/><link rel="icon" type="image/png" sizes="32x32" href="/fem-getting-started-with-javascript/images/favicon-32x32.png" data-next-head=""/><link rel="icon" type="image/png" sizes="16x16" href="/fem-getting-started-with-javascript/images/favicon-16x16.png" data-next-head=""/><link rel="icon" type="image/png" sizes="16x16" href="/fem-getting-started-with-javascript/images/favicon-16x16.png" data-next-head=""/><link rel="icon" type="image/x-icon" href="/fem-getting-started-with-javascript/images/favicon.ico" data-next-head=""/><title data-next-head="">Reference vs Value – Getting Started with JavaScript</title><meta name="description" content="Learn the crucial difference between how JavaScript handles primitive values versus object references." data-next-head=""/><meta name="keywords" content="JavaScript,JS,WebDevSimplified,Web Dev Simplified,Frontend Masters,FrontendMasters" data-next-head=""/><meta name="og:description" content="Learn the crucial difference between how JavaScript handles primitive values versus object references." data-next-head=""/><meta name="og:title" content="Reference vs Value – Getting Started with JavaScript" data-next-head=""/><meta name="og:image" content="/fem-getting-started-with-javascript/images/social-share-cover.jpg" data-next-head=""/><meta name="twitter:card" content="summary_large_image" data-next-head=""/><link data-next-font="size-adjust" rel="preconnect" href="/" crossorigin="anonymous"/><link rel="preload" href="/fem-getting-started-with-javascript/_next/static/css/faa0c8c264e10ac6.css" as="style"/><link rel="stylesheet" href="/fem-getting-started-with-javascript/_next/static/css/faa0c8c264e10ac6.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" noModule="" src="/fem-getting-started-with-javascript/_next/static/chunks/polyfills-42372ed130431b0a.js"></script><script src="/fem-getting-started-with-javascript/_next/static/chunks/webpack-e60a0b0179e49569.js" defer=""></script><script src="/fem-getting-started-with-javascript/_next/static/chunks/framework-2f335d22a7318891.js" defer=""></script><script src="/fem-getting-started-with-javascript/_next/static/chunks/main-5e9eee573290a714.js" defer=""></script><script src="/fem-getting-started-with-javascript/_next/static/chunks/pages/_app-ce4d6c6be34144da.js" defer=""></script><script src="/fem-getting-started-with-javascript/_next/static/chunks/pages/lessons/%5Bsection%5D/%5Bslug%5D-49f6f6e40a31f45e.js" defer=""></script><script src="/fem-getting-started-with-javascript/_next/static/DkIXD-70iUnXfTkPJY6_X/_buildManifest.js" defer=""></script><script src="/fem-getting-started-with-javascript/_next/static/DkIXD-70iUnXfTkPJY6_X/_ssgManifest.js" defer=""></script></head><body><div id="__next"><div class="remix-app"><header class="navbar"><h1 class="navbar-brand"><a href="/fem-getting-started-with-javascript">Getting Started with JavaScript</a></h1><div class="navbar-info"><a href="https://frontendmasters.com/courses/getting-started-with-javascript-v3/" class="cta-btn">Watch on Frontend Masters</a></div></header><div class="content-container"><div class="main"><div class="lesson-container"><div class="lesson"><div class="lesson-content"><h1>Reference vs Value</h1>
+<p>One of the most important concepts to understand in JavaScript is how variables store data in your computer&#39;s memory. There are two main categories of data types: <strong>value types</strong> (primitives) and <strong>reference types</strong> (objects, arrays, functions).</p>
+<p>⚠️ <strong>WARNING:</strong> This is a tricky topic, so take your time to understand it fully!</p>
+<h2>How Value Types Work</h2>
+<p>When you assign primitive values, JavaScript copies the actual value directly into your computer&#39;s memory:</p>
+<pre><code class="hljs language-javascript"><button class="copy-btn">Copy</button><span class="hljs-keyword">const</span> a = <span class="hljs-number">10</span>
+<span class="hljs-keyword">const</span> b = <span class="hljs-string">&quot;hi&quot;</span>
+</code></pre><div style="max-width: 500px;">
+
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>a</code></td>
+<td><code>10</code></td>
+</tr>
+<tr>
+<td><code>b</code></td>
+<td><code>&quot;hi&quot;</code></td>
+</tr>
+</tbody></table>
+</div>
+
+<h3>Copying Value Types</h3>
+<p>When you copy a variable that holds a primitive value, JavaScript creates a completely new copy of that value in memory:</p>
+<pre><code class="hljs language-javascript"><button class="copy-btn">Copy</button><span class="hljs-keyword">let</span> a = <span class="hljs-number">10</span>
+<span class="hljs-keyword">let</span> b = a <span class="hljs-comment">// Copies the VALUE of a</span>
+
+b = b + <span class="hljs-number">1</span> <span class="hljs-comment">// Only changes b, not a</span>
+</code></pre><div style="max-width: 500px;">
+
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>a</code></td>
+<td><code>10</code></td>
+</tr>
+<tr>
+<td><code>b</code></td>
+<td><code>11</code></td>
+</tr>
+</tbody></table>
+</div>
+
+<h2>How Reference Types Work</h2>
+<p>When you create arrays or objects, JavaScript stores a <strong>reference</strong> (memory address) to where the data lives:</p>
+<pre><code class="hljs language-javascript"><button class="copy-btn">Copy</button><span class="hljs-keyword">const</span> c = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>]
+</code></pre><div class="side-by-side-tables">
+
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value (Reference)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>c</code></td>
+<td><code>0x001</code></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>Memory Location</th>
+<th>Actual Data</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>0x001</code></td>
+<td><code>[1, 2]</code></td>
+</tr>
+</tbody></table>
+</div>
+
+<p>Think of <code>0x001</code> as a &quot;hotel room number&quot; - the variable stores the room number, not the actual contents of the room.</p>
+<h3>Copying Reference Types</h3>
+<p>When you copy a variable that holds an array or object, JavaScript copies the <strong>reference</strong> (memory address), not the actual data:</p>
+<pre><code class="hljs language-javascript"><button class="copy-btn">Copy</button><span class="hljs-keyword">const</span> c = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>]
+<span class="hljs-keyword">const</span> d = c <span class="hljs-comment">// Copies the REFERENCE, not the array</span>
+
+d.<span class="hljs-title function_">push</span>(<span class="hljs-number">3</span>) <span class="hljs-comment">// Modifies the array that both c and d point to</span>
+</code></pre><div class="side-by-side-tables">
+
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value (Reference)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>c</code></td>
+<td><code>0x001</code></td>
+</tr>
+<tr>
+<td><code>d</code></td>
+<td><code>0x001</code></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>Memory Location</th>
+<th>Actual Data</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>0x001</code></td>
+<td><code>[1, 2, 3]</code></td>
+</tr>
+</tbody></table>
+</div>
+
+<p>Both <code>c</code> and <code>d</code> store the same memory address (<code>0x001</code>), so they both point to the same array in memory.</p>
+<h2>Creating New References</h2>
+<p>When you create a new array/object, JavaScript allocates a new memory location:</p>
+<pre><code class="hljs language-javascript"><button class="copy-btn">Copy</button><span class="hljs-keyword">let</span> c = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>] <span class="hljs-comment">// Memory location 0x001</span>
+<span class="hljs-keyword">let</span> d = [<span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>] <span class="hljs-comment">// Memory location 0x002 (different!)</span>
+
+d.<span class="hljs-title function_">push</span>(<span class="hljs-number">6</span>)
+</code></pre><div class="side-by-side-tables">
+
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value (Reference)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>c</code></td>
+<td><code>0x001</code></td>
+</tr>
+<tr>
+<td><code>d</code></td>
+<td><code>0x002</code></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>Memory Location</th>
+<th>Actual Data</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>0x001</code></td>
+<td><code>[1, 2]</code></td>
+</tr>
+<tr>
+<td><code>0x002</code></td>
+<td><code>[3, 4, 5, 6]</code></td>
+</tr>
+</tbody></table>
+</div>
+
+<h3>Comparing References</h3>
+<p>Since JavaScript compares the <code>Value (Reference)</code> column and not the actual contents, two different arrays/objects with the same contents are considered different:</p>
+<pre><code class="hljs language-javascript"><button class="copy-btn">Copy</button><span class="hljs-keyword">const</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>]
+<span class="hljs-keyword">const</span> b = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>] <span class="hljs-comment">// Same contents, but different memory locations!</span>
+
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(a == b) <span class="hljs-comment">// false</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(a === b) <span class="hljs-comment">// false</span>
+</code></pre><div class="side-by-side-tables">
+
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value (Reference)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>a</code></td>
+<td><code>0x001</code></td>
+</tr>
+<tr>
+<td><code>b</code></td>
+<td><code>0x002</code></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>Memory Location</th>
+<th>Actual Data</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>0x001</code></td>
+<td><code>[1, 2]</code></td>
+</tr>
+<tr>
+<td><code>0x002</code></td>
+<td><code>[1, 2]</code></td>
+</tr>
+</tbody></table>
+</div>
+
+<p>JavaScript is asking: &quot;Is <code>0x001</code> the same as <code>0x002</code>?&quot; The answer is no, even though the contents are identical.</p>
+<h4>When Equality Returns True</h4>
+<pre><code class="hljs language-javascript"><button class="copy-btn">Copy</button><span class="hljs-keyword">const</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>]
+<span class="hljs-keyword">const</span> b = a <span class="hljs-comment">// Same reference!</span>
+
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(a === b) <span class="hljs-comment">// true ← Both point to same memory location</span>
+</code></pre><h4>Objects Work the Same Way</h4>
+<pre><code class="hljs language-javascript"><button class="copy-btn">Copy</button><span class="hljs-keyword">let</span> person1 = { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Kyle&quot;</span> }
+<span class="hljs-keyword">let</span> person2 = person1 <span class="hljs-comment">// Same reference</span>
+
+person2.<span class="hljs-property">name</span> = <span class="hljs-string">&quot;Joe&quot;</span>
+
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(person1.<span class="hljs-property">name</span>) <span class="hljs-comment">// &quot;Joe&quot; ← Changed!</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(person2.<span class="hljs-property">name</span>) <span class="hljs-comment">// &quot;Joe&quot; ← Same object</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(person1 === person2) <span class="hljs-comment">// true ← Same reference</span>
+
+<span class="hljs-comment">// But creating a new object:</span>
+<span class="hljs-keyword">const</span> person3 = { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Joe&quot;</span> }
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(person1 === person3) <span class="hljs-comment">// false ← Different references</span>
+</code></pre><h3><code>const</code> with References</h3>
+<p>The <code>const</code> keyword prevents you from reassigning a variable, but it doesn&#39;t prevent you from modifying the contents of arrays/objects declared with <code>const</code>.</p>
+<p><code>const</code> only cares about the <code>Value (Reference)</code> column.</p>
+<pre><code class="hljs language-javascript"><button class="copy-btn">Copy</button><span class="hljs-keyword">const</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>]
+
+<span class="hljs-comment">// This works! We&#x27;re not changing the reference</span>
+arr.<span class="hljs-title function_">push</span>(<span class="hljs-number">3</span>)
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(arr) <span class="hljs-comment">// [1, 2, 3]</span>
+
+<span class="hljs-comment">// This fails! We&#x27;re trying to change the reference</span>
+arr = [<span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>] <span class="hljs-comment">// ❌ TypeError: Assignment to constant variable</span>
+</code></pre><div style="max-width: 500px;">
+
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value (Reference)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>a</code></td>
+<td><code>0x001</code></td>
+</tr>
+</tbody></table>
+</div>
+
+<h2>Functions and References</h2>
+<p>When you pass arrays/objects to functions, you&#39;re passing the reference which means the function can modify the original data:</p>
+<pre><code class="hljs language-javascript"><button class="copy-btn">Copy</button><span class="hljs-keyword">function</span> <span class="hljs-title function_">addElement</span>(<span class="hljs-params">array, element</span>) {
+  array.<span class="hljs-title function_">push</span>(element) <span class="hljs-comment">// Modifies the original array!</span>
+}
+
+<span class="hljs-keyword">const</span> numbers = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]
+<span class="hljs-title function_">addElement</span>(numbers, <span class="hljs-number">4</span>)
+
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(numbers) <span class="hljs-comment">// [1, 2, 3, 4] ← Original array modified</span>
+</code></pre></div><div class="lesson-links"><a href="/fem-getting-started-with-javascript/lessons/advanced-variables/objects" class="prev">← Previous</a><a href="/fem-getting-started-with-javascript/lessons/advanced-variables/string-template-literals" class="next">Next →</a></div></div><div class="details-bg"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="154" height="154" viewBox="0 0 154 154"><defs><clipPath id="clip-path"><rect id="Rectangle_2238" data-name="Rectangle 2238" width="154" height="154" transform="translate(9467 350)" fill="#fff" stroke="#707070" stroke-width="1"></rect></clipPath><clipPath id="clip-corner-image-active"><rect width="154" height="154"></rect></clipPath></defs><g id="corner-image-active" clip-path="url(#clip-corner-image-active)"><g id="Corner-image-active-2" data-name="Corner-image-active" transform="translate(-9467 -350)" clip-path="url(#clip-path)"><path id="Subtraction_34" data-name="Subtraction 34" d="M-3857.365,1740.766h0l-7.07-7.07,12.89-12.89v14.142l-5.818,5.818Zm-14.142-14.142h0l-7.071-7.07,27.033-27.033v14.143l-19.96,19.96Zm-14.143-14.143h0l-7.07-7.069,41.175-41.175v14.142Zm-14.142-14.142h0l-7.07-7.069,55.317-55.317v14.142Zm-14.142-14.142h0l-7.07-7.069,69.459-69.459v14.142Zm-14.142-14.142h0l-7.07-7.069,76.739-76.739h6.862v7.28Zm-14.143-14.143h0l-7.07-7.069,62.6-62.6h14.142Zm-14.142-14.142h0l-7.07-7.069,48.454-48.454h14.142Zm-14.142-14.142h0l-7.07-7.069,34.312-34.312h14.142Zm-14.142-14.142h0l-7.07-7.069,20.17-20.17h14.142Zm-14.142-14.142h0l-7.071-7.071,6.027-6.027h14.144l-13.1,13.1Zm367.24-56.114v-.909l.455.455-.453.453Z" transform="translate(13472.546 -1236.766)" fill="var(--corner-fill)"></path></g></g></svg></div></div></div></div><footer class="footer"><ul class="socials"><li class="social"><a href="https://twitter.com/DevSimplified"><svg fill="none" height="100%" width="32" xmlns="http://www.w3.org/2000/svg" viewBox="0.254 0.25 500 451.95400000000006"><path d="M394.033.25h76.67L303.202 191.693l197.052 260.511h-154.29L225.118 294.205 86.844 452.204H10.127l179.16-204.77L.254.25H158.46l109.234 144.417zm-26.908 406.063h42.483L135.377 43.73h-45.59z" fill="var(--footer-icons)"></path></svg></a></li><li class="social"><a href="https://github.com/WebDevSimplified"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32"><defs><clipPath id="clip-github-social"><rect width="32" height="32"></rect></clipPath></defs><g id="github-social" clip-path="url(#clip-github-social)"><g id="Group_272" data-name="Group 272" transform="translate(13522.5 -6994)"><path id="Subtraction_33" data-name="Subtraction 33" d="M-24967.5,8041a15.9,15.9,0,0,1-11.312-4.688A15.893,15.893,0,0,1-24983.5,8025a15.893,15.893,0,0,1,4.689-11.315A15.894,15.894,0,0,1-24967.5,8009a15.894,15.894,0,0,1,11.313,4.686A15.893,15.893,0,0,1-24951.5,8025a15.893,15.893,0,0,1-4.689,11.313A15.9,15.9,0,0,1-24967.5,8041Zm-3.781-4.571h0v3.918h7.895v-6.665a1.836,1.836,0,0,0-1.2-1.718c5.1-.617,7.467-2.975,7.467-7.424a7.176,7.176,0,0,0-1.637-4.728,6.74,6.74,0,0,0,.275-1.812,4.34,4.34,0,0,0-.52-2.452.574.574,0,0,0-.359-.1c-1.061,0-3.465,1.411-3.936,1.694a16.644,16.644,0,0,0-4.2-.489,16.379,16.379,0,0,0-3.969.445c-.846-.5-2.91-1.649-3.859-1.649a.566.566,0,0,0-.354.095,4.3,4.3,0,0,0-.521,2.452,6.7,6.7,0,0,0,.244,1.718,7.346,7.346,0,0,0-1.6,4.822,7.263,7.263,0,0,0,1.533,4.985c1.193,1.359,3.115,2.165,5.871,2.464a1.826,1.826,0,0,0-1.129,1.693v.5h0l-.006,0a7.121,7.121,0,0,1-2.033.363,2.608,2.608,0,0,1-.965-.158,4.438,4.438,0,0,1-1.836-1.881,2.361,2.361,0,0,0-1.248-1.091,3.472,3.472,0,0,0-1.217-.3.584.584,0,0,0-.545.224.282.282,0,0,0,.027.367,1.875,1.875,0,0,0,.447.307,4.732,4.732,0,0,1,.561.355,10.726,10.726,0,0,1,1.682,2.755c.043.092.078.163.105.217a3.876,3.876,0,0,0,2.42,1.185,6.036,6.036,0,0,0,.607.025c.875,0,1.988-.124,2-.125Z" transform="translate(11461 -1015)" fill="var(--footer-icons)"></path><g id="Ellipse_670" data-name="Ellipse 670" transform="translate(-13522.5 6994)" fill="none" stroke="var(--footer-icons)" stroke-width="1"><circle cx="16" cy="16" r="16" stroke="none"></circle><circle cx="16" cy="16" r="15.5" fill="none"></circle></g></g></g></svg></a></li><li class="social"><div class="terms"><p>Content Licensed Under CC-BY-NC-4.0</p><p>Code Samples and Exercises Licensed Under Apache 2.0</p><p>Site Designed by<!-- --> <a href="https://www.alexdanielson.com/">Alex Danielson</a></p></div></li></ul><div class="theme-icons"><button aria-label="Activate dark mode" title="Activate dark mode" class="theme-toggle"><svg xmlns="http://www.w3.org/2000/svg" width="36px" height="100%" viewBox="0 -960 960 960" fill="var(--text-footer)" role="img"><title>Dark Mode Icon</title><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Z"></path></svg></button></div></footer></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"post":{"attributes":{"description":"Learn the crucial difference between how JavaScript handles primitive values versus object references."},"html":"\u003ch1\u003eReference vs Value\u003c/h1\u003e\n\u003cp\u003eOne of the most important concepts to understand in JavaScript is how variables store data in your computer\u0026#39;s memory. There are two main categories of data types: \u003cstrong\u003evalue types\u003c/strong\u003e (primitives) and \u003cstrong\u003ereference types\u003c/strong\u003e (objects, arrays, functions).\u003c/p\u003e\n\u003cp\u003e⚠️ \u003cstrong\u003eWARNING:\u003c/strong\u003e This is a tricky topic, so take your time to understand it fully!\u003c/p\u003e\n\u003ch2\u003eHow Value Types Work\u003c/h2\u003e\n\u003cp\u003eWhen you assign primitive values, JavaScript copies the actual value directly into your computer\u0026#39;s memory:\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-javascript\"\u003e\u003cbutton class=\"copy-btn\"\u003eCopy\u003c/button\u003e\u003cspan class=\"hljs-keyword\"\u003econst\u003c/span\u003e a = \u003cspan class=\"hljs-number\"\u003e10\u003c/span\u003e\n\u003cspan class=\"hljs-keyword\"\u003econst\u003c/span\u003e b = \u003cspan class=\"hljs-string\"\u003e\u0026quot;hi\u0026quot;\u003c/span\u003e\n\u003c/code\u003e\u003c/pre\u003e\u003cdiv style=\"max-width: 500px;\"\u003e\n\n\u003ctable\u003e\n\u003cthead\u003e\n\u003ctr\u003e\n\u003cth\u003eVariable\u003c/th\u003e\n\u003cth\u003eValue\u003c/th\u003e\n\u003c/tr\u003e\n\u003c/thead\u003e\n\u003ctbody\u003e\u003ctr\u003e\n\u003ctd\u003e\u003ccode\u003ea\u003c/code\u003e\u003c/td\u003e\n\u003ctd\u003e\u003ccode\u003e10\u003c/code\u003e\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e\u003ccode\u003eb\u003c/code\u003e\u003c/td\u003e\n\u003ctd\u003e\u003ccode\u003e\u0026quot;hi\u0026quot;\u003c/code\u003e\u003c/td\u003e\n\u003c/tr\u003e\n\u003c/tbody\u003e\u003c/table\u003e\n\u003c/div\u003e\n\n\u003ch3\u003eCopying Value Types\u003c/h3\u003e\n\u003cp\u003eWhen you copy a variable that holds a primitive value, JavaScript creates a completely new copy of that value in memory:\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-javascript\"\u003e\u003cbutton class=\"copy-btn\"\u003eCopy\u003c/button\u003e\u003cspan class=\"hljs-keyword\"\u003elet\u003c/span\u003e a = \u003cspan class=\"hljs-number\"\u003e10\u003c/span\u003e\n\u003cspan class=\"hljs-keyword\"\u003elet\u003c/span\u003e b = a \u003cspan class=\"hljs-comment\"\u003e// Copies the VALUE of a\u003c/span\u003e\n\nb = b + \u003cspan class=\"hljs-number\"\u003e1\u003c/span\u003e \u003cspan class=\"hljs-comment\"\u003e// Only changes b, not a\u003c/span\u003e\n\u003c/code\u003e\u003c/pre\u003e\u003cdiv style=\"max-width: 500px;\"\u003e\n\n\u003ctable\u003e\n\u003cthead\u003e\n\u003ctr\u003e\n\u003cth\u003eVariable\u003c/th\u003e\n\u003cth\u003eValue\u003c/th\u003e\n\u003c/tr\u003e\n\u003c/thead\u003e\n\u003ctbody\u003e\u003ctr\u003e\n\u003ctd\u003e\u003ccode\u003ea\u003c/code\u003e\u003c/td\u003e\n\u003ctd\u003e\u003ccode\u003e10\u003c/code\u003e\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e\u003ccode\u003eb\u003c/code\u003e\u003c/td\u003e\n\u003ctd\u003e\u003ccode\u003e11\u003c/code\u003e\u003c/td\u003e\n\u003c/tr\u003e\n\u003c/tbody\u003e\u003c/table\u003e\n\u003c/div\u003e\n\n\u003ch2\u003eHow Reference Types Work\u003c/h2\u003e\n\u003cp\u003eWhen you create arrays or objects, JavaScript stores a \u003cstrong\u003ereference\u003c/strong\u003e (memory address) to where the data lives:\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-javascript\"\u003e\u003cbutton class=\"copy-btn\"\u003eCopy\u003c/button\u003e\u003cspan class=\"hljs-keyword\"\u003econst\u003c/span\u003e c = [\u003cspan class=\"hljs-number\"\u003e1\u003c/span\u003e, \u003cspan class=\"hljs-number\"\u003e2\u003c/span\u003e]\n\u003c/code\u003e\u003c/pre\u003e\u003cdiv class=\"side-by-side-tables\"\u003e\n\n\u003ctable\u003e\n\u003cthead\u003e\n\u003ctr\u003e\n\u003cth\u003eVariable\u003c/th\u003e\n\u003cth\u003eValue (Reference)\u003c/th\u003e\n\u003c/tr\u003e\n\u003c/thead\u003e\n\u003ctbody\u003e\u003ctr\u003e\n\u003ctd\u003e\u003ccode\u003ec\u003c/code\u003e\u003c/td\u003e\n\u003ctd\u003e\u003ccode\u003e0x001\u003c/code\u003e\u003c/td\u003e\n\u003c/tr\u003e\n\u003c/tbody\u003e\u003c/table\u003e\n\u003ctable\u003e\n\u003cthead\u003e\n\u003ctr\u003e\n\u003cth\u003eMemory Location\u003c/th\u003e\n\u003cth\u003eActual Data\u003c/th\u003e\n\u003c/tr\u003e\n\u003c/thead\u003e\n\u003ctbody\u003e\u003ctr\u003e\n\u003ctd\u003e\u003ccode\u003e0x001\u003c/code\u003e\u003c/td\u003e\n\u003ctd\u003e\u003ccode\u003e[1, 2]\u003c/code\u003e\u003c/td\u003e\n\u003c/tr\u003e\n\u003c/tbody\u003e\u003c/table\u003e\n\u003c/div\u003e\n\n\u003cp\u003eThink of \u003ccode\u003e0x001\u003c/code\u003e as a \u0026quot;hotel room number\u0026quot; - the variable stores the room number, not the actual contents of the room.\u003c/p\u003e\n\u003ch3\u003eCopying Reference Types\u003c/h3\u003e\n\u003cp\u003eWhen you copy a variable that holds an array or object, JavaScript copies the \u003cstrong\u003ereference\u003c/strong\u003e (memory address), not the actual data:\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-javascript\"\u003e\u003cbutton class=\"copy-btn\"\u003eCopy\u003c/button\u003e\u003cspan class=\"hljs-keyword\"\u003econst\u003c/span\u003e c = [\u003cspan class=\"hljs-number\"\u003e1\u003c/span\u003e, \u003cspan class=\"hljs-number\"\u003e2\u003c/span\u003e]\n\u003cspan class=\"hljs-keyword\"\u003econst\u003c/span\u003e d = c \u003cspan class=\"hljs-comment\"\u003e// Copies the REFERENCE, not the array\u003c/span\u003e\n\nd.\u003cspan class=\"hljs-title function_\"\u003epush\u003c/span\u003e(\u003cspan class=\"hljs-number\"\u003e3\u003c/span\u003e) \u003cspan class=\"hljs-comment\"\u003e// Modifies the array that both c and d point to\u003c/span\u003e\n\u003c/code\u003e\u003c/pre\u003e\u003cdiv class=\"side-by-side-tables\"\u003e\n\n\u003ctable\u003e\n\u003cthead\u003e\n\u003ctr\u003e\n\u003cth\u003eVariable\u003c/th\u003e\n\u003cth\u003eValue (Reference)\u003c/th\u003e\n\u003c/tr\u003e\n\u003c/thead\u003e\n\u003ctbody\u003e\u003ctr\u003e\n\u003ctd\u003e\u003ccode\u003ec\u003c/code\u003e\u003c/td\u003e\n\u003ctd\u003e\u003ccode\u003e0x001\u003c/code\u003e\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e\u003ccode\u003ed\u003c/code\u003e\u003c/td\u003e\n\u003ctd\u003e\u003ccode\u003e0x001\u003c/code\u003e\u003c/td\u003e\n\u003c/tr\u003e\n\u003c/tbody\u003e\u003c/table\u003e\n\u003ctable\u003e\n\u003cthead\u003e\n\u003ctr\u003e\n\u003cth\u003eMemory Location\u003c/th\u003e\n\u003cth\u003eActual Data\u003c/th\u003e\n\u003c/tr\u003e\n\u003c/thead\u003e\n\u003ctbody\u003e\u003ctr\u003e\n\u003ctd\u003e\u003ccode\u003e0x001\u003c/code\u003e\u003c/td\u003e\n\u003ctd\u003e\u003ccode\u003e[1, 2, 3]\u003c/code\u003e\u003c/td\u003e\n\u003c/tr\u003e\n\u003c/tbody\u003e\u003c/table\u003e\n\u003c/div\u003e\n\n\u003cp\u003eBoth \u003ccode\u003ec\u003c/code\u003e and \u003ccode\u003ed\u003c/code\u003e store the same memory address (\u003ccode\u003e0x001\u003c/code\u003e), so they both point to the same array in memory.\u003c/p\u003e\n\u003ch2\u003eCreating New References\u003c/h2\u003e\n\u003cp\u003eWhen you create a new array/object, JavaScript allocates a new memory location:\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-javascript\"\u003e\u003cbutton class=\"copy-btn\"\u003eCopy\u003c/button\u003e\u003cspan class=\"hljs-keyword\"\u003elet\u003c/span\u003e c = [\u003cspan class=\"hljs-number\"\u003e1\u003c/span\u003e, \u003cspan class=\"hljs-number\"\u003e2\u003c/span\u003e] \u003cspan class=\"hljs-comment\"\u003e// Memory location 0x001\u003c/span\u003e\n\u003cspan class=\"hljs-keyword\"\u003elet\u003c/span\u003e d = [\u003cspan class=\"hljs-number\"\u003e3\u003c/span\u003e, \u003cspan class=\"hljs-number\"\u003e4\u003c/span\u003e, \u003cspan class=\"hljs-number\"\u003e5\u003c/span\u003e] \u003cspan class=\"hljs-comment\"\u003e// Memory location 0x002 (different!)\u003c/span\u003e\n\nd.\u003cspan class=\"hljs-title function_\"\u003epush\u003c/span\u003e(\u003cspan class=\"hljs-number\"\u003e6\u003c/span\u003e)\n\u003c/code\u003e\u003c/pre\u003e\u003cdiv class=\"side-by-side-tables\"\u003e\n\n\u003ctable\u003e\n\u003cthead\u003e\n\u003ctr\u003e\n\u003cth\u003eVariable\u003c/th\u003e\n\u003cth\u003eValue (Reference)\u003c/th\u003e\n\u003c/tr\u003e\n\u003c/thead\u003e\n\u003ctbody\u003e\u003ctr\u003e\n\u003ctd\u003e\u003ccode\u003ec\u003c/code\u003e\u003c/td\u003e\n\u003ctd\u003e\u003ccode\u003e0x001\u003c/code\u003e\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e\u003ccode\u003ed\u003c/code\u003e\u003c/td\u003e\n\u003ctd\u003e\u003ccode\u003e0x002\u003c/code\u003e\u003c/td\u003e\n\u003c/tr\u003e\n\u003c/tbody\u003e\u003c/table\u003e\n\u003ctable\u003e\n\u003cthead\u003e\n\u003ctr\u003e\n\u003cth\u003eMemory Location\u003c/th\u003e\n\u003cth\u003eActual Data\u003c/th\u003e\n\u003c/tr\u003e\n\u003c/thead\u003e\n\u003ctbody\u003e\u003ctr\u003e\n\u003ctd\u003e\u003ccode\u003e0x001\u003c/code\u003e\u003c/td\u003e\n\u003ctd\u003e\u003ccode\u003e[1, 2]\u003c/code\u003e\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e\u003ccode\u003e0x002\u003c/code\u003e\u003c/td\u003e\n\u003ctd\u003e\u003ccode\u003e[3, 4, 5, 6]\u003c/code\u003e\u003c/td\u003e\n\u003c/tr\u003e\n\u003c/tbody\u003e\u003c/table\u003e\n\u003c/div\u003e\n\n\u003ch3\u003eComparing References\u003c/h3\u003e\n\u003cp\u003eSince JavaScript compares the \u003ccode\u003eValue (Reference)\u003c/code\u003e column and not the actual contents, two different arrays/objects with the same contents are considered different:\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-javascript\"\u003e\u003cbutton class=\"copy-btn\"\u003eCopy\u003c/button\u003e\u003cspan class=\"hljs-keyword\"\u003econst\u003c/span\u003e a = [\u003cspan class=\"hljs-number\"\u003e1\u003c/span\u003e, \u003cspan class=\"hljs-number\"\u003e2\u003c/span\u003e]\n\u003cspan class=\"hljs-keyword\"\u003econst\u003c/span\u003e b = [\u003cspan class=\"hljs-number\"\u003e1\u003c/span\u003e, \u003cspan class=\"hljs-number\"\u003e2\u003c/span\u003e] \u003cspan class=\"hljs-comment\"\u003e// Same contents, but different memory locations!\u003c/span\u003e\n\n\u003cspan class=\"hljs-variable language_\"\u003econsole\u003c/span\u003e.\u003cspan class=\"hljs-title function_\"\u003elog\u003c/span\u003e(a == b) \u003cspan class=\"hljs-comment\"\u003e// false\u003c/span\u003e\n\u003cspan class=\"hljs-variable language_\"\u003econsole\u003c/span\u003e.\u003cspan class=\"hljs-title function_\"\u003elog\u003c/span\u003e(a === b) \u003cspan class=\"hljs-comment\"\u003e// false\u003c/span\u003e\n\u003c/code\u003e\u003c/pre\u003e\u003cdiv class=\"side-by-side-tables\"\u003e\n\n\u003ctable\u003e\n\u003cthead\u003e\n\u003ctr\u003e\n\u003cth\u003eVariable\u003c/th\u003e\n\u003cth\u003eValue (Reference)\u003c/th\u003e\n\u003c/tr\u003e\n\u003c/thead\u003e\n\u003ctbody\u003e\u003ctr\u003e\n\u003ctd\u003e\u003ccode\u003ea\u003c/code\u003e\u003c/td\u003e\n\u003ctd\u003e\u003ccode\u003e0x001\u003c/code\u003e\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e\u003ccode\u003eb\u003c/code\u003e\u003c/td\u003e\n\u003ctd\u003e\u003ccode\u003e0x002\u003c/code\u003e\u003c/td\u003e\n\u003c/tr\u003e\n\u003c/tbody\u003e\u003c/table\u003e\n\u003ctable\u003e\n\u003cthead\u003e\n\u003ctr\u003e\n\u003cth\u003eMemory Location\u003c/th\u003e\n\u003cth\u003eActual Data\u003c/th\u003e\n\u003c/tr\u003e\n\u003c/thead\u003e\n\u003ctbody\u003e\u003ctr\u003e\n\u003ctd\u003e\u003ccode\u003e0x001\u003c/code\u003e\u003c/td\u003e\n\u003ctd\u003e\u003ccode\u003e[1, 2]\u003c/code\u003e\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e\u003ccode\u003e0x002\u003c/code\u003e\u003c/td\u003e\n\u003ctd\u003e\u003ccode\u003e[1, 2]\u003c/code\u003e\u003c/td\u003e\n\u003c/tr\u003e\n\u003c/tbody\u003e\u003c/table\u003e\n\u003c/div\u003e\n\n\u003cp\u003eJavaScript is asking: \u0026quot;Is \u003ccode\u003e0x001\u003c/code\u003e the same as \u003ccode\u003e0x002\u003c/code\u003e?\u0026quot; The answer is no, even though the contents are identical.\u003c/p\u003e\n\u003ch4\u003eWhen Equality Returns True\u003c/h4\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-javascript\"\u003e\u003cbutton class=\"copy-btn\"\u003eCopy\u003c/button\u003e\u003cspan class=\"hljs-keyword\"\u003econst\u003c/span\u003e a = [\u003cspan class=\"hljs-number\"\u003e1\u003c/span\u003e, \u003cspan class=\"hljs-number\"\u003e2\u003c/span\u003e]\n\u003cspan class=\"hljs-keyword\"\u003econst\u003c/span\u003e b = a \u003cspan class=\"hljs-comment\"\u003e// Same reference!\u003c/span\u003e\n\n\u003cspan class=\"hljs-variable language_\"\u003econsole\u003c/span\u003e.\u003cspan class=\"hljs-title function_\"\u003elog\u003c/span\u003e(a === b) \u003cspan class=\"hljs-comment\"\u003e// true ← Both point to same memory location\u003c/span\u003e\n\u003c/code\u003e\u003c/pre\u003e\u003ch4\u003eObjects Work the Same Way\u003c/h4\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-javascript\"\u003e\u003cbutton class=\"copy-btn\"\u003eCopy\u003c/button\u003e\u003cspan class=\"hljs-keyword\"\u003elet\u003c/span\u003e person1 = { \u003cspan class=\"hljs-attr\"\u003ename\u003c/span\u003e: \u003cspan class=\"hljs-string\"\u003e\u0026quot;Kyle\u0026quot;\u003c/span\u003e }\n\u003cspan class=\"hljs-keyword\"\u003elet\u003c/span\u003e person2 = person1 \u003cspan class=\"hljs-comment\"\u003e// Same reference\u003c/span\u003e\n\nperson2.\u003cspan class=\"hljs-property\"\u003ename\u003c/span\u003e = \u003cspan class=\"hljs-string\"\u003e\u0026quot;Joe\u0026quot;\u003c/span\u003e\n\n\u003cspan class=\"hljs-variable language_\"\u003econsole\u003c/span\u003e.\u003cspan class=\"hljs-title function_\"\u003elog\u003c/span\u003e(person1.\u003cspan class=\"hljs-property\"\u003ename\u003c/span\u003e) \u003cspan class=\"hljs-comment\"\u003e// \u0026quot;Joe\u0026quot; ← Changed!\u003c/span\u003e\n\u003cspan class=\"hljs-variable language_\"\u003econsole\u003c/span\u003e.\u003cspan class=\"hljs-title function_\"\u003elog\u003c/span\u003e(person2.\u003cspan class=\"hljs-property\"\u003ename\u003c/span\u003e) \u003cspan class=\"hljs-comment\"\u003e// \u0026quot;Joe\u0026quot; ← Same object\u003c/span\u003e\n\u003cspan class=\"hljs-variable language_\"\u003econsole\u003c/span\u003e.\u003cspan class=\"hljs-title function_\"\u003elog\u003c/span\u003e(person1 === person2) \u003cspan class=\"hljs-comment\"\u003e// true ← Same reference\u003c/span\u003e\n\n\u003cspan class=\"hljs-comment\"\u003e// But creating a new object:\u003c/span\u003e\n\u003cspan class=\"hljs-keyword\"\u003econst\u003c/span\u003e person3 = { \u003cspan class=\"hljs-attr\"\u003ename\u003c/span\u003e: \u003cspan class=\"hljs-string\"\u003e\u0026quot;Joe\u0026quot;\u003c/span\u003e }\n\u003cspan class=\"hljs-variable language_\"\u003econsole\u003c/span\u003e.\u003cspan class=\"hljs-title function_\"\u003elog\u003c/span\u003e(person1 === person3) \u003cspan class=\"hljs-comment\"\u003e// false ← Different references\u003c/span\u003e\n\u003c/code\u003e\u003c/pre\u003e\u003ch3\u003e\u003ccode\u003econst\u003c/code\u003e with References\u003c/h3\u003e\n\u003cp\u003eThe \u003ccode\u003econst\u003c/code\u003e keyword prevents you from reassigning a variable, but it doesn\u0026#39;t prevent you from modifying the contents of arrays/objects declared with \u003ccode\u003econst\u003c/code\u003e.\u003c/p\u003e\n\u003cp\u003e\u003ccode\u003econst\u003c/code\u003e only cares about the \u003ccode\u003eValue (Reference)\u003c/code\u003e column.\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-javascript\"\u003e\u003cbutton class=\"copy-btn\"\u003eCopy\u003c/button\u003e\u003cspan class=\"hljs-keyword\"\u003econst\u003c/span\u003e arr = [\u003cspan class=\"hljs-number\"\u003e1\u003c/span\u003e, \u003cspan class=\"hljs-number\"\u003e2\u003c/span\u003e]\n\n\u003cspan class=\"hljs-comment\"\u003e// This works! We\u0026#x27;re not changing the reference\u003c/span\u003e\narr.\u003cspan class=\"hljs-title function_\"\u003epush\u003c/span\u003e(\u003cspan class=\"hljs-number\"\u003e3\u003c/span\u003e)\n\u003cspan class=\"hljs-variable language_\"\u003econsole\u003c/span\u003e.\u003cspan class=\"hljs-title function_\"\u003elog\u003c/span\u003e(arr) \u003cspan class=\"hljs-comment\"\u003e// [1, 2, 3]\u003c/span\u003e\n\n\u003cspan class=\"hljs-comment\"\u003e// This fails! We\u0026#x27;re trying to change the reference\u003c/span\u003e\narr = [\u003cspan class=\"hljs-number\"\u003e4\u003c/span\u003e, \u003cspan class=\"hljs-number\"\u003e5\u003c/span\u003e, \u003cspan class=\"hljs-number\"\u003e6\u003c/span\u003e] \u003cspan class=\"hljs-comment\"\u003e// ❌ TypeError: Assignment to constant variable\u003c/span\u003e\n\u003c/code\u003e\u003c/pre\u003e\u003cdiv style=\"max-width: 500px;\"\u003e\n\n\u003ctable\u003e\n\u003cthead\u003e\n\u003ctr\u003e\n\u003cth\u003eVariable\u003c/th\u003e\n\u003cth\u003eValue (Reference)\u003c/th\u003e\n\u003c/tr\u003e\n\u003c/thead\u003e\n\u003ctbody\u003e\u003ctr\u003e\n\u003ctd\u003e\u003ccode\u003ea\u003c/code\u003e\u003c/td\u003e\n\u003ctd\u003e\u003ccode\u003e0x001\u003c/code\u003e\u003c/td\u003e\n\u003c/tr\u003e\n\u003c/tbody\u003e\u003c/table\u003e\n\u003c/div\u003e\n\n\u003ch2\u003eFunctions and References\u003c/h2\u003e\n\u003cp\u003eWhen you pass arrays/objects to functions, you\u0026#39;re passing the reference which means the function can modify the original data:\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-javascript\"\u003e\u003cbutton class=\"copy-btn\"\u003eCopy\u003c/button\u003e\u003cspan class=\"hljs-keyword\"\u003efunction\u003c/span\u003e \u003cspan class=\"hljs-title function_\"\u003eaddElement\u003c/span\u003e(\u003cspan class=\"hljs-params\"\u003earray, element\u003c/span\u003e) {\n  array.\u003cspan class=\"hljs-title function_\"\u003epush\u003c/span\u003e(element) \u003cspan class=\"hljs-comment\"\u003e// Modifies the original array!\u003c/span\u003e\n}\n\n\u003cspan class=\"hljs-keyword\"\u003econst\u003c/span\u003e numbers = [\u003cspan class=\"hljs-number\"\u003e1\u003c/span\u003e, \u003cspan class=\"hljs-number\"\u003e2\u003c/span\u003e, \u003cspan class=\"hljs-number\"\u003e3\u003c/span\u003e]\n\u003cspan class=\"hljs-title function_\"\u003eaddElement\u003c/span\u003e(numbers, \u003cspan class=\"hljs-number\"\u003e4\u003c/span\u003e)\n\n\u003cspan class=\"hljs-variable language_\"\u003econsole\u003c/span\u003e.\u003cspan class=\"hljs-title function_\"\u003elog\u003c/span\u003e(numbers) \u003cspan class=\"hljs-comment\"\u003e// [1, 2, 3, 4] ← Original array modified\u003c/span\u003e\n\u003c/code\u003e\u003c/pre\u003e","markdown":"\n# Reference vs Value\n\nOne of the most important concepts to understand in JavaScript is how variables store data in your computer's memory. There are two main categories of data types: **value types** (primitives) and **reference types** (objects, arrays, functions).\n\n⚠️ **WARNING:** This is a tricky topic, so take your time to understand it fully!\n\n## How Value Types Work\n\nWhen you assign primitive values, JavaScript copies the actual value directly into your computer's memory:\n\n```javascript\nconst a = 10\nconst b = \"hi\"\n```\n\n\u003cdiv style=\"max-width: 500px;\"\u003e\n\n| Variable | Value  |\n| -------- | ------ |\n| `a`      | `10`   |\n| `b`      | `\"hi\"` |\n\n\u003c/div\u003e\n\n### Copying Value Types\n\nWhen you copy a variable that holds a primitive value, JavaScript creates a completely new copy of that value in memory:\n\n```javascript\nlet a = 10\nlet b = a // Copies the VALUE of a\n\nb = b + 1 // Only changes b, not a\n```\n\n\u003cdiv style=\"max-width: 500px;\"\u003e\n\n| Variable | Value |\n| -------- | ----- |\n| `a`      | `10`  |\n| `b`      | `11`  |\n\n\u003c/div\u003e\n\n## How Reference Types Work\n\nWhen you create arrays or objects, JavaScript stores a **reference** (memory address) to where the data lives:\n\n```javascript\nconst c = [1, 2]\n```\n\n\u003cdiv class=\"side-by-side-tables\"\u003e\n\n| Variable | Value (Reference) |\n| -------- | ----------------- |\n| `c`      | `0x001`           |\n\n| Memory Location | Actual Data |\n| --------------- | ----------- |\n| `0x001`         | `[1, 2]`    |\n\n\u003c/div\u003e\n\nThink of `0x001` as a \"hotel room number\" - the variable stores the room number, not the actual contents of the room.\n\n### Copying Reference Types\n\nWhen you copy a variable that holds an array or object, JavaScript copies the **reference** (memory address), not the actual data:\n\n```javascript\nconst c = [1, 2]\nconst d = c // Copies the REFERENCE, not the array\n\nd.push(3) // Modifies the array that both c and d point to\n```\n\n\u003cdiv class=\"side-by-side-tables\"\u003e\n\n| Variable | Value (Reference) |\n| -------- | ----------------- |\n| `c`      | `0x001`           |\n| `d`      | `0x001`           |\n\n| Memory Location | Actual Data |\n| --------------- | ----------- |\n| `0x001`         | `[1, 2, 3]` |\n\n\u003c/div\u003e\n\nBoth `c` and `d` store the same memory address (`0x001`), so they both point to the same array in memory.\n\n## Creating New References\n\nWhen you create a new array/object, JavaScript allocates a new memory location:\n\n```javascript\nlet c = [1, 2] // Memory location 0x001\nlet d = [3, 4, 5] // Memory location 0x002 (different!)\n\nd.push(6)\n```\n\n\u003cdiv class=\"side-by-side-tables\"\u003e\n\n| Variable | Value (Reference) |\n| -------- | ----------------- |\n| `c`      | `0x001`           |\n| `d`      | `0x002`           |\n\n| Memory Location | Actual Data    |\n| --------------- | -------------- |\n| `0x001`         | `[1, 2]`       |\n| `0x002`         | `[3, 4, 5, 6]` |\n\n\u003c/div\u003e\n\n### Comparing References\n\nSince JavaScript compares the `Value (Reference)` column and not the actual contents, two different arrays/objects with the same contents are considered different:\n\n```javascript\nconst a = [1, 2]\nconst b = [1, 2] // Same contents, but different memory locations!\n\nconsole.log(a == b) // false\nconsole.log(a === b) // false\n```\n\n\u003cdiv class=\"side-by-side-tables\"\u003e\n\n| Variable | Value (Reference) |\n| -------- | ----------------- |\n| `a`      | `0x001`           |\n| `b`      | `0x002`           |\n\n| Memory Location | Actual Data |\n| --------------- | ----------- |\n| `0x001`         | `[1, 2]`    |\n| `0x002`         | `[1, 2]`    |\n\n\u003c/div\u003e\n\nJavaScript is asking: \"Is `0x001` the same as `0x002`?\" The answer is no, even though the contents are identical.\n\n#### When Equality Returns True\n\n```javascript\nconst a = [1, 2]\nconst b = a // Same reference!\n\nconsole.log(a === b) // true ← Both point to same memory location\n```\n\n#### Objects Work the Same Way\n\n```javascript\nlet person1 = { name: \"Kyle\" }\nlet person2 = person1 // Same reference\n\nperson2.name = \"Joe\"\n\nconsole.log(person1.name) // \"Joe\" ← Changed!\nconsole.log(person2.name) // \"Joe\" ← Same object\nconsole.log(person1 === person2) // true ← Same reference\n\n// But creating a new object:\nconst person3 = { name: \"Joe\" }\nconsole.log(person1 === person3) // false ← Different references\n```\n\n### `const` with References\n\nThe `const` keyword prevents you from reassigning a variable, but it doesn't prevent you from modifying the contents of arrays/objects declared with `const`.\n\n`const` only cares about the `Value (Reference)` column.\n\n```javascript\nconst arr = [1, 2]\n\n// This works! We're not changing the reference\narr.push(3)\nconsole.log(arr) // [1, 2, 3]\n\n// This fails! We're trying to change the reference\narr = [4, 5, 6] // ❌ TypeError: Assignment to constant variable\n```\n\n\u003cdiv style=\"max-width: 500px;\"\u003e\n\n| Variable | Value (Reference) |\n| -------- | ----------------- |\n| `a`      | `0x001`           |\n\n\u003c/div\u003e\n\n## Functions and References\n\nWhen you pass arrays/objects to functions, you're passing the reference which means the function can modify the original data:\n\n```javascript\nfunction addElement(array, element) {\n  array.push(element) // Modifies the original array!\n}\n\nconst numbers = [1, 2, 3]\naddElement(numbers, 4)\n\nconsole.log(numbers) // [1, 2, 3, 4] ← Original array modified\n```\n","slug":"reference-vs-value","title":"Reference vs Value","section":"Advanced Variables","icon":"layer-group","filePath":"/home/runner/work/fem-getting-started-with-javascript/fem-getting-started-with-javascript/lessons/07-advanced-variables/G-reference-vs-value.md","nextSlug":"/fem-getting-started-with-javascript/lessons/advanced-variables/string-template-literals","prevSlug":"/fem-getting-started-with-javascript/lessons/advanced-variables/objects"}},"__N_SSG":true},"page":"/lessons/[section]/[slug]","query":{"section":"advanced-variables","slug":"reference-vs-value"},"buildId":"DkIXD-70iUnXfTkPJY6_X","assetPrefix":"/fem-getting-started-with-javascript","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>

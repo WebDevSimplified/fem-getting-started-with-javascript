@@ -1,0 +1,79 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="600" height="400" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2" rx="10" />
+
+  <!-- Title -->
+  <text x="300" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="18"
+    font-weight="bold" fill="#343a40">The Programming Cycle</text>
+
+  <!-- Step 1: Idea -->
+  <rect x="50" y="60" width="120" height="40" fill="#e7f3ff" stroke="#0066cc" stroke-width="2"
+    rx="5" />
+  <text x="110" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="12"
+    font-weight="bold" fill="#0066cc">💡 Idea</text>
+
+  <!-- Arrow 1 -->
+  <path d="M 110 110 L 110 140" stroke="#6c757d" stroke-width="2" fill="none"
+    marker-end="url(#arrowhead)" />
+
+  <!-- Step 2: Write Code -->
+  <rect x="50" y="150" width="120" height="40" fill="#e8f5e8" stroke="#28a745" stroke-width="2"
+    rx="5" />
+  <text x="110" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="12"
+    font-weight="bold" fill="#28a745">⌨️ Write Code</text>
+
+  <!-- Arrow 2 -->
+  <path d="M 110 200 L 110 230" stroke="#6c757d" stroke-width="2" fill="none"
+    marker-end="url(#arrowhead)" />
+
+  <!-- Step 3: Error -->
+  <rect x="50" y="240" width="120" height="40" fill="#f8d7da" stroke="#dc3545" stroke-width="2"
+    rx="5" />
+  <text x="110" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="12"
+    font-weight="bold" fill="#dc3545">🔴 Error/Bug</text>
+
+  <!-- Arrow 3 -->
+  <path d="M 170 260 L 200 260" stroke="#6c757d" stroke-width="2" fill="none"
+    marker-end="url(#arrowhead)" />
+
+  <!-- Step 4: Debug -->
+  <rect x="210" y="240" width="120" height="40" fill="#fff3cd" stroke="#ffc107" stroke-width="2"
+    rx="5" />
+  <text x="270" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="12"
+    font-weight="bold" fill="#856404">🔍 Debug</text>
+
+  <!-- Arrow 4 -->
+  <path d="M 330 260 L 360 260" stroke="#6c757d" stroke-width="2" fill="none"
+    marker-end="url(#arrowhead)" />
+
+  <!-- Step 5: Fix -->
+  <rect x="370" y="240" width="120" height="40" fill="#d1ecf1" stroke="#17a2b8" stroke-width="2"
+    rx="5" />
+  <text x="430" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="12"
+    font-weight="bold" fill="#0c5460">🔧 Fix &amp; Try</text>
+
+  <!-- Arrow 5 (back up) -->
+  <path d="M 430 240 L 430 170 L 180 170" stroke="#6c757d" stroke-width="2" fill="none"
+    marker-end="url(#arrowhead)" stroke-dasharray="5,5" />
+
+  <!-- Step 6: Success -->
+  <rect x="150" y="320" width="300" height="40" fill="#d4edda" stroke="#28a745" stroke-width="2"
+    rx="5" />
+  <text x="300" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="12"
+    font-weight="bold" fill="#155724">✅ Success (repeat for next feature)</text>
+
+  <!-- Arrow to success -->
+  <path d="M 270 290 L 270 310" stroke="#6c757d" stroke-width="2" fill="none"
+    marker-end="url(#arrowhead)" />
+
+  <!-- Note -->
+  <text x="300" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="11"
+    fill="#6c757d" font-style="italic">This cycle repeats for every feature you build!</text>
+
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6c757d" />
+    </marker>
+  </defs>
+</svg>
